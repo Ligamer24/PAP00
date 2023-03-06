@@ -1,0 +1,41 @@
+.main {
+    border: 0.25vw solid gray;
+}
+.main > h1 {
+    font-size: 2vw;
+    text-align: right;
+}
+
+.main .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vh 0;
+}
+
+.main >.content > .desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.main >.content > .desc, .main > .content > img{
+    padding: 0 1vw;    
+}
+
+.main > .content > .desc > a {
+    font-size: 3vw;
+
+    text-align: center;
+
+    padding: 1vh 5vw;
+    margin-left: 10vw;
+}
+
+.main > .content > .desc > p {
+    margin: 2rem 0;
+}
+
+.main > .content > img {
+    width: 25vw;
+}

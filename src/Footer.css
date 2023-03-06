@@ -1,0 +1,21 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 10vh;
+  margin-bottom: 0;
+
+  border-top: 0.25vw solid gray;
+}
+
+footer p {
+  margin-bottom: 0;
+}
