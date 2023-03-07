@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup} from "firebase/auth"
+import { collection, doc, getFirestore, setDoc } from "firebase/firestore";
+import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup} from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -20,7 +20,17 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const db = getFirestore(app)
+
+const users = collection(db, "users")
+const citiesRef = collection(db, "cities")
+
+//
+setDoc(doc(citiesRef, "SF"), {
+  name: "San Francisco", state: "CA", country: "USA",
+  capital: false, population: 860000,
+  regions: ["west_coast", "norcal"] });
+//
 
 const provider = new GoogleAuthProvider()
 
