@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { collection, doc, getFirestore, setDoc } from "firebase/firestore";
+import { collection, doc, getFirestore, setDoc, getDoc, getDocs } from "firebase/firestore";
 import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup} from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -23,14 +23,25 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 
 const users = collection(db, "users")
+
+/*Adds info to db
 const citiesRef = collection(db, "cities")
 
-//
-setDoc(doc(citiesRef, "SF"), {
-  name: "San Francisco", state: "CA", country: "USA",
-  capital: false, population: 860000,
-  regions: ["west_coast", "norcal"] });
-//
+setDoc(doc(citiesRef, "PT"), {
+  name: "Wow"});
+*/
+
+const docRef = doc(db, "cities", "SF");
+const docSnap = await getDoc(docRef);
+console.log(docSnap)
+if (docSnap.exists()) {
+  console.log("Document data:", docSnap.data());
+} else {
+  // doc.data() will be undefined in this case
+  console.log("No such document!");
+}
+
+console.log("hi!")
 
 const provider = new GoogleAuthProvider()
 

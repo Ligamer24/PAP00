@@ -1,0 +1,5 @@
+-------------------------------Problemas ao criar a PAP ultrapassados------------------------------------------------------
+
+--Para o Firebase
+
+-Função await não dava por um problema de webpack. 
