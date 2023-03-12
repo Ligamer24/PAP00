@@ -1,0 +1,53 @@
+#title {
+    margin: clamp(0.2rem, 2vh, 2rem) clamp(1rem, 10vh, 10rem);/*0.625rem 3.125rem;*/
+    margin-right: clamp(2rem, 30vw, 20rem);
+    padding-left: clamp(1rem, 2vw, 2rem);
+    padding-bottom: clamp(1rem, 2vh, 2rem);
+
+    text-transform: uppercase;
+    font-family: arcade;
+    font-style: italic;
+    font-size: clamp(1rem, 5.5vw, 6rem);
+    color: white;
+
+    border-bottom: 0.1625rem solid rgb(200, 200, 200);
+}
+
+/*Espaço para o menu formatation caso dê não muito bem*/
+
+.corpo {
+    margin-top: 5%;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0.2rem solid rgb(150, 150, 150);
+}
+
+tr, th, td {
+    font-style: italic;
+}
+
+tr {
+    border-bottom: 0.0625rem solid rgb(150, 150, 150);
+    background-color: black;
+    color: white;
+    font-family: "arcade";
+}
+
+.headRow {
+    border: 0.2rem solid rgb(150, 150, 150);
+}
+
+th h1 {
+    margin: 1vw 1vh;
+    font-size: clamp(1rem, 3vw, 3rem);
+}
+
+td {
+    font-size: clamp(1rem, 2vw, 2rem);
+    padding: 1.875rem;
+    text-align: center;
+}
