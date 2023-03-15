@@ -34,6 +34,7 @@
 
 .navbar .pages a {
   margin: 0 1vw;
+  padding: .5vh .5vw;
 }
 
 .navbar > img {

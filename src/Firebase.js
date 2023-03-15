@@ -47,6 +47,7 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log("You are Logged in! ", user.displayName)
     //Aqui posso definir o nome, podendo pedir o username que gostaria de ter ao utilizador
+    //userLog = true
     
   } else {
     console.log("You are not Logged in!")
