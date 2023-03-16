@@ -39,20 +39,19 @@ if (docSnap.exists()) {
 
 
 
-
-
-
 //Auth Listener
 onAuthStateChanged(auth, (user) => {
-  if (user) {
-    console.log("You are Logged in! ", user.displayName)
-    //Aqui posso definir o nome, podendo pedir o username que gostaria de ter ao utilizador
-    //userLog = true
-    
-  } else {
-    console.log("You are not Logged in!")
-  }
+if (user) {
+  console.log("You are Logged in! ", user.displayName)
+  //Aqui posso definir o nome, podendo pedir o username que gostaria de ter ao utilizador
+} else {
+  console.log("You are not Logged in!")
+}
 })
+
+
+
+
 
 //Navbar Google Login
 const provider = new GoogleAuthProvider()
