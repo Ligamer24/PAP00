@@ -3,12 +3,17 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
+import {user} from "../Firebase";
+
+
+
 
 const Layout = () => {
-    
+
     return (
+        
         <>
-            <Navbar />
+            <Navbar userInfo={user}/>
             <Outlet />
             <Footer />
         </>
@@ -16,3 +21,4 @@ const Layout = () => {
 }
 
 export default Layout;
+

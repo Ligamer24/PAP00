@@ -1,11 +1,11 @@
 import { initializeApp } from "firebase/app";
 import { collection, doc, getFirestore, setDoc, getDoc, getDocs, addDoc } from "firebase/firestore";
-import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup} from "firebase/auth";
+import { GoogleAuthProvider, getAuth, signInWithPopup} from "firebase/auth";
 
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+export const app = initializeApp({
   apiKey: "AIzaSyBRWM_5RUCNFfHv4ISjR0iKmSk8ORki9UY",
   authDomain: "projeto1-3eea1.firebaseapp.com",
   projectId: "projeto1-3eea1",
@@ -13,10 +13,8 @@ const firebaseConfig = {
   messagingSenderId: "404925885432",
   appId: "1:404925885432:web:ce59e394c76351f476440d",
   measurementId: "G-TKQDST0ZV0"
-};
+});
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
 //Initialize FireStore
 const db = getFirestore(app)
 //Initialize Authentication
@@ -39,15 +37,13 @@ if (docSnap.exists()) {
 
 
 
-//Auth Listener
-onAuthStateChanged(auth, (user) => {
+export const user = auth.currentUser
+
 if (user) {
-  console.log("You are Logged in! ", user.displayName)
-  //Aqui posso definir o nome, podendo pedir o username que gostaria de ter ao utilizador
+  console.log("You're Loged in!", user.displayName)
 } else {
-  console.log("You are not Logged in!")
+  console.log("Sem Login")
 }
-})
 
 
 
@@ -65,6 +61,7 @@ export function googleAuth() {
     // The signed-in user info.
     const user = result.user;
     // ...
+    console.log("Login succesful!")
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
