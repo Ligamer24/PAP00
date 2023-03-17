@@ -1,15 +1,19 @@
+import { useState } from "react";
 import "./Navbar.css";
 import logo from "./Images/winner.png";
 import { Link } from "react-router-dom";
-import { googleAuth } from "./Firebase";
+import { googleAuth, userSignOut } from "./Firebase";
+
 
 
 export default function Navbar({ userInfo }) {
+  
+
   return (
     <>
-    {console.log(button())}
       <div className="navbar">
-        <button onClick={googleAuth}>{userInfo ? userInfo.displayName : "Login"}</button>
+        <Button user={userInfo} />
+
         <img src={logo} />
         <div className="pages">
           <Link to="/">Home</Link>
@@ -22,8 +26,14 @@ export default function Navbar({ userInfo }) {
   );
 }
 
-function button() {
-  
-}
+function Button({user}) {
 
+  //const [signIn, setSignIn] = useState(false)
+
+  console.log("user:", user)
+
+    return (
+      <button onClick={user ? userSignOut : googleAuth}>{user ? user.displayName : "Login"}</button>
+    )
+}
 

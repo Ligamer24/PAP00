@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { collection, doc, getFirestore, setDoc, getDoc, getDocs, addDoc } from "firebase/firestore";
-import { GoogleAuthProvider, getAuth, signInWithPopup} from "firebase/auth";
+import { GoogleAuthProvider, getAuth, signInWithPopup, signOut, onAuthStateChanged} from "firebase/auth";
 
 
 // Your web app's Firebase configuration
@@ -18,7 +18,7 @@ export const app = initializeApp({
 //Initialize FireStore
 const db = getFirestore(app)
 //Initialize Authentication
-const auth = getAuth(app)
+export const auth = getAuth(app)
 
 
 
@@ -47,8 +47,6 @@ if (user) {
 
 
 
-
-
 //Navbar Google Login
 const provider = new GoogleAuthProvider()
 
@@ -72,4 +70,12 @@ export function googleAuth() {
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
   });
+}
+
+export function userSignOut() {
+  signOut(auth).then(() => {
+    console.log("Sign out succesful!")
+  }).catch((error) => {
+    console.log("An error happened...")
+  })
 }

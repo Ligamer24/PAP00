@@ -7,6 +7,9 @@ import "./index.css"
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Leaderboard from "./pages/Leaderboard";
+//Firebase
+import {user, auth} from "./Firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 
 
@@ -27,4 +30,13 @@ export default function App() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<App />)
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    return root.render(<App />)
+    // ...
+  } else {
+    return root.render(<App />)
+  }
+});
