@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { collection, doc, getFirestore, setDoc, getDoc, getDocs, addDoc } from "firebase/firestore";
-import { GoogleAuthProvider, getAuth, signInWithPopup, signOut, onAuthStateChanged} from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 
 // Your web app's Firebase configuration
@@ -39,6 +39,7 @@ if (docSnap.exists()) {
 
 export const user = auth.currentUser
 
+
 if (user) {
   console.log("You're Loged in!", user.displayName)
 } else {
@@ -48,34 +49,6 @@ if (user) {
 
 
 //Navbar Google Login
-const provider = new GoogleAuthProvider()
 
-export function googleAuth() {
-    signInWithPopup(auth, provider)
-  .then((result) => {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    // The signed-in user info.
-    const user = result.user;
-    // ...
-    console.log("Login succesful!")
-  }).catch((error) => {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // The email of the user's account used.
-    const email = error.customData.email;
-    // The AuthCredential type that was used.
-    const credential = GoogleAuthProvider.credentialFromError(error);
-    // ...
-  });
-}
 
-export function userSignOut() {
-  signOut(auth).then(() => {
-    console.log("Sign out succesful!")
-  }).catch((error) => {
-    console.log("An error happened...")
-  })
-}
+
