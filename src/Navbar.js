@@ -7,8 +7,8 @@ import { GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged} from 
 
 
 
-export default function Navbar({ userInfo }) {
-  const [signIn, setSignIn] = useState(false)
+export default function Navbar() {
+  const [userData, setUserData] = useState(null)
 
   function googleAuth() {
     signInWithPopup(auth, new GoogleAuthProvider())
@@ -18,9 +18,8 @@ export default function Navbar({ userInfo }) {
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
-    // ...
-    setSignIn(true)
-    console.log("Login succesful!", userInfo)
+ 
+    setUserData(user)
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
@@ -35,7 +34,7 @@ export default function Navbar({ userInfo }) {
 
 function userSignOut() {
   signOut(auth).then(() => {
-    setSignIn(false)
+    setUserData(null)
     console.log("Sign out succesful!")
     
 
@@ -45,17 +44,13 @@ function userSignOut() {
 }
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
-    console.log("onAuth a funcionar!")
-    setSignIn(true)
+    
+    console.log("onAuth a funcionar!", user)
+    setUserData(user)
     // ...
   } else {
-    // User is signed out
-    // ...
     console.log("onAuth a funcionar, user nao esta conectado!")
-    setSignIn(false)
+    setUserData(null)
   }
 })
 
@@ -63,7 +58,7 @@ onAuthStateChanged(auth, (user) => {
     
     <>
       <div className="navbar">
-      <button onClick={signIn ? userSignOut : googleAuth}>{signIn ? userInfo.displayName : "Login"}</button>
+      <button onClick={userData ? userSignOut : googleAuth}>{userData ? userData.displayName : "Login"}</button>
 
         <img src={logo} />
         <div className="pages">
