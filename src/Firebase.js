@@ -37,7 +37,7 @@ if (docSnap.exists()) {
 
 
 
-export const user = auth.currentUser
+/*export const user = auth.currentUser
 
 
 if (user) {
@@ -45,7 +45,7 @@ if (user) {
 } else {
   console.log("Sem Login")
 }
-
+*/
 
 
 //Navbar Google Login

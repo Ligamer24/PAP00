@@ -15,6 +15,7 @@ export default function Navbar() {
   .then((result) => {    
     const user = result.user;
     setUserData(user)
+    console.log("Sign In succesful!")
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
