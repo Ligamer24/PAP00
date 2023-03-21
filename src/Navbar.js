@@ -3,7 +3,7 @@ import "./Navbar.css";
 import logo from "./Images/winner.png";
 import { Link } from "react-router-dom";
 import { auth } from "./Firebase";
-import { GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged} from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup, signOut} from "firebase/auth";
 
 
 
@@ -12,13 +12,8 @@ export default function Navbar() {
 
   function googleAuth() {
     signInWithPopup(auth, new GoogleAuthProvider())
-  .then((result) => {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    // The signed-in user info.
+  .then((result) => {    
     const user = result.user;
- 
     setUserData(user)
   }).catch((error) => {
     // Handle Errors here.
@@ -28,7 +23,7 @@ export default function Navbar() {
     const email = error.customData.email;
     // The AuthCredential type that was used.
     const credential = GoogleAuthProvider.credentialFromError(error);
-    // ...
+    console.log("Error:", errorCode, errorMessage, email, credential)
   });
 }
 
@@ -42,17 +37,6 @@ function userSignOut() {
     console.log("An error happened...")
   })
 }
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    
-    console.log("onAuth a funcionar!", user)
-    setUserData(user)
-    // ...
-  } else {
-    console.log("onAuth a funcionar, user nao esta conectado!")
-    setUserData(null)
-  }
-})
 
   return (
     
