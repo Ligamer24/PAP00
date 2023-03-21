@@ -1,7 +1,8 @@
 import "../Leaderboard.css"
-
+import { getUsers } from "../Firebase"
 
 export default function Leaderboard() {
+    
     return (
         <>
         <h1 id="title">Leaderboard</h1>
@@ -16,9 +17,9 @@ export default function Leaderboard() {
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>Ligamer24</td>
-                    <td>3ºSIS</td>
-                    <td>0</td>
+                    <td>{userData.Name}</td>
+                    <td>{userData.Class}</td>
+                    <td>{userData.Score}</td>
                 </tr>
             </tbody>
         </table>
@@ -26,6 +27,7 @@ export default function Leaderboard() {
     )
 }
 
-
+const userData = await getUsers()
+console.log(userData)
 
 
