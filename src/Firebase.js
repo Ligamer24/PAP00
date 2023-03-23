@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { collection, doc, getFirestore, setDoc, getDoc, getDocs, addDoc } from "firebase/firestore";
+import { collection, doc, getFirestore, setDoc, getDoc, getDocs, addDoc, query, orderBy } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 
@@ -24,34 +24,25 @@ export const auth = getAuth(app)
 
 export async function getUsers() {
   
-const docRef = doc(db, "users", "Leandro");
-const docSnap = await getDoc(docRef);
+  const docRef = doc(db, "users", "Leandro");
+  const docSnap = await getDoc(docRef);
 
-if (docSnap.exists()) {
-  console.log("Document data:", docSnap.data());
-  return docSnap.data()
-} else {
-  // doc.data() will be undefined in this case
-  console.log("No such document!");
-  return "error"
+  if (docSnap.exists()) {
+    console.log("Document data:", docSnap.data());
+    return docSnap.data()
+  } else {
+    // doc.data() will be undefined in this case
+    console.log("No such document!");
+    return "error"
+  }
 }
-}
 
-
-
-
-/*export const user = auth.currentUser
-
-
-if (user) {
-  console.log("You're Loged in!", user.displayName)
-} else {
-  console.log("Sem Login")
-}
-*/
-
-
-//Navbar Google Login
+const usersRef = collection(db, "users");
+const q = query(usersRef, orderBy("Score"));
+const querySnapshot = await getDocs(q)
+querySnapshot.forEach((doc) => {
+  console.log(doc.data())
+})
 
 
 
