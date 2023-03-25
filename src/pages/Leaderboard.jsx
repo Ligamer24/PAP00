@@ -2,6 +2,23 @@ import "../Leaderboard.css"
 import { getUsers } from "../Firebase"
 
 export default function Leaderboard() {
+
+    function insertPlayer(userData) {
+        var userRow = []
+        
+        for (var i = 0; i < userData.length; i++) {
+            userRow.push(
+                <tr key={userData[i].Name}>
+                <td>{i + 1}</td>
+                <td>{userData[i].Name}</td>
+                <td>{userData[i].Class}</td>
+                <td>{userData[i].Score}</td>
+                </tr>)
+            
+        }
+        return userRow;
+    }
+    
     
     return (
         <>
@@ -15,12 +32,7 @@ export default function Leaderboard() {
                     <th><h1>Turma</h1></th>
                     <th><h1>Pontos</h1></th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>{userData.Name}</td>
-                    <td>{userData.Class}</td>
-                    <td>{userData.Score}</td>
-                </tr>
+                {insertPlayer(userData)}
             </tbody>
         </table>
         </>
@@ -29,5 +41,4 @@ export default function Leaderboard() {
 
 const userData = await getUsers()
 console.log(userData)
-
 

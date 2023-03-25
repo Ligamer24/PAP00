@@ -24,25 +24,15 @@ export const auth = getAuth(app)
 
 export async function getUsers() {
   
-  const docRef = doc(db, "users", "Leandro");
-  const docSnap = await getDoc(docRef);
-
-  if (docSnap.exists()) {
-    console.log("Document data:", docSnap.data());
-    return docSnap.data()
-  } else {
-    // doc.data() will be undefined in this case
-    console.log("No such document!");
-    return "error"
-  }
+  var usersArray = [];
+  const usersRef = collection(db, "users");
+  const q = query(usersRef, orderBy("Score", "desc"));
+  const querySnapshot = await getDocs(q)
+  querySnapshot.forEach((doc) => {
+    usersArray.push(doc.data())
+  })
+  return usersArray;
 }
-
-const usersRef = collection(db, "users");
-const q = query(usersRef, orderBy("Score"));
-const querySnapshot = await getDocs(q)
-querySnapshot.forEach((doc) => {
-  console.log(doc.data())
-})
 
 
 
