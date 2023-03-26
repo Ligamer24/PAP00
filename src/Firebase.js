@@ -34,5 +34,13 @@ export async function getUsers() {
   return usersArray;
 }
 
-
+export async function addUserToDb(user) {
+  var userClass = user.displayName.split(" ")
+  userClass = userClass[userClass.length-1]
+  await setDoc(doc(db, "users", user.uid), {
+    Class: userClass,
+    Name: user.displayName,
+    Score: 0
+  })
+}
 

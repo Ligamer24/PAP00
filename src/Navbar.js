@@ -2,8 +2,9 @@ import { useState } from "react";
 import "./Navbar.css";
 import logo from "./Images/winner.png";
 import { Link } from "react-router-dom";
-import { auth } from "./Firebase";
+import { auth, addUserToDb} from "./Firebase";
 import { GoogleAuthProvider, signInWithPopup, signOut} from "firebase/auth";
+
 
 
 
@@ -15,7 +16,8 @@ export default function Navbar() {
   .then((result) => {    
     const user = result.user;
     setUserData(user)
-    console.log("Sign In succesful!")
+    user.metadata.creationTime == user.metadata.lastSignInTime ? addUserToDb(user) : console.log("Já tem conta!")
+    console.log("Sign In succesful!", user)
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
@@ -56,4 +58,3 @@ function userSignOut() {
     </>
   );
 }
-
