@@ -14,7 +14,7 @@ footer {
   margin-bottom: 0;
 
   border-top: 0.25vw solid gray;
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.2);
 }
 
 footer p {
