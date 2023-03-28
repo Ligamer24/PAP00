@@ -16,7 +16,7 @@ export default function Navbar() {
   .then((result) => {    
     const user = result.user;
     setUserData(user)
-    user.metadata.creationTime == user.metadata.lastSignInTime ? addUserToDb(user) : console.log("Já tem conta!")
+    user.metadata.creationTime === user.metadata.lastSignInTime ? addUserToDb(user) : console.log("Já tem conta!")
     console.log("Sign In succesful!", user)
   }).catch((error) => {
     // Handle Errors here.
@@ -47,7 +47,7 @@ function userSignOut() {
       <div className="navbar">
       <button onClick={userData ? userSignOut : googleAuth}>{userData ? userData.displayName : "Login"}</button>
 
-        <img src={logo} />
+        <img src={logo} alt=""/>
         <div className="pages">
           <Link to="/">Home</Link>
           <Link to="/leaderboard">Pontos</Link>

@@ -7,7 +7,7 @@ export default function Main() {
     <div className="main">
       <h1>Bem-Vindo Jogador(a)</h1>
       <div className="content">
-        <img src={trophy} />
+        <img src={trophy} alt="" />
         <div className="desc">
           <Link to="/leaderboard">Pontos</Link>
           <Link to="/rules">Regras</Link>

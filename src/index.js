@@ -8,7 +8,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Leaderboard from "./pages/Leaderboard";
 //Firebase
-import {user, auth} from "./Firebase";
+import {auth} from "./Firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
 
