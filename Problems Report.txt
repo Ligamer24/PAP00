@@ -2,4 +2,11 @@
 
 --Para o Firebase
 
--Função await não dava por um problema de webpack. 
+-Função await não dava por um problema de webpack.
+RESOLUÇÃO:  Usar uma ferramenta CRACO para criar e editar json packages e configurar o webpack para aceitar funções async
+
+
+--Problema com o prompt
+
+-Não funcionava pois ao dar login com o google, o foco estava na janela do mesmo.
+RESOLUÇÃO:  Usar o comando window.focus() para, como o comando sugere, fazer da página desejada o seu foco. 
