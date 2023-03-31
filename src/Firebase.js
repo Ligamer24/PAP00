@@ -43,7 +43,7 @@ export async function addUserToDb(user) {
   user.displayName = userDesiredName
   await setDoc(doc(db, "users", user.uid), {
     Class: userClass,
-    Name: user.displayName == "" ? console.log("Sem nickname definido!", user.displayName) : user.displayName,
+    Name: user.displayName ? console.log("Sem nickname definido!", user.displayName) : user.displayName,
     Score: 0
   })
 }
