@@ -37,7 +37,14 @@ export async function getUsers() {
 export async function addUserToDb(user) {
   var userClass = user.displayName.split(" ")
   userClass = userClass[userClass.length-1]
-  const userDesiredName = prompt("Insira o seu username:")
+  var userDesiredName = prompt("Insira o seu username:")
+  var userNameConfirm = window.confirm(userDesiredName + " é o username que quer? ATENÇÃO: CASO QUEIRAS MUDAR, TERÁS DE CONTACTAR COM O RESPONSÁVEL DO PROJETO", false);
+
+  while (userNameConfirm == false) {
+    userDesiredName = prompt("Insira o seu username:")
+    userNameConfirm = window.confirm(userDesiredName + " é o username que quer? ATENÇÃO: CASO QUEIRAS MUDAR, TERÁS DE CONTACTAR COM O RESPONSÁVEL DO PROJETO", false);
+
+  }
   user.displayName = userDesiredName
 
   if (user.displayName) {
