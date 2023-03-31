@@ -41,10 +41,14 @@ export async function addUserToDb(user) {
   console.log("window focused!")
   const userDesiredName = prompt("Insira o seu username:")
   user.displayName = userDesiredName
-  await setDoc(doc(db, "users", user.uid), {
-    Class: userClass,
-    Name: user.displayName ? user.displayName : console.log("Sem nickname definido!", user.displayName),
-    Score: 0
-  })
+
+  if (user.displayName) {
+    await setDoc(doc(db, "users", user.uid), {
+      Class: userClass,
+      Name: user.displayName,
+      Score: 0
+    })
+  } else console.log("Não colocou o username!")
+  
 }
 
