@@ -37,7 +37,9 @@ export async function getUsers() {
 export async function addUserToDb(user) {
   var userClass = user.displayName.split(" ")
   userClass = userClass[userClass.length-1]
-  window.focus()
+  for (var i = 0; i < 10; i++) {
+    window.focus()
+  }
   console.log("window focused!")
   const userDesiredName = prompt("Insira o seu username:")
   user.displayName = userDesiredName
