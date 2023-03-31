@@ -20,7 +20,7 @@ const db = getFirestore(app)
 //Initialize Authentication
 export const auth = getAuth(app)
 
-
+console.log("hi from firebase")
 
 export async function getUsers() {
   
