@@ -38,6 +38,7 @@ export async function addUserToDb(user) {
   var userClass = user.displayName.split(" ")
   userClass = userClass[userClass.length-1]
   window.focus()
+  console.log("window focused!")
   const userDesiredName = prompt("Insira o seu username:")
   user.displayName = userDesiredName
   await setDoc(doc(db, "users", user.uid), {
