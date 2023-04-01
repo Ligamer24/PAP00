@@ -36,7 +36,7 @@ export async function getUsers() {
 
 export async function addUserToDb(user) {
   console.log("ooooooooooooooooooooh yeah")
-  const userClass = user.displayName.split(" ")
+  var userClass = user.displayName.split(" ")
   userClass = userClass[userClass.length-1]
 
   //console.log(typeof(+userClass[userClass.length - 2]) == "number")
