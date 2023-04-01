@@ -8,5 +8,5 @@ RESOLUÇÃO:  Usar uma ferramenta CRACO para criar e editar json packages e conf
 
 --Problema com o prompt
 
--Não funcionava pois ao dar login com o google, o foco estava na janela do mesmo.
-RESOLUÇÃO:  Usar o comando window.focus() para, como o comando sugere, fazer da página desejada o seu foco. 
+-Não funcionava pois ao dar login, o foco estava na janela do mesmo.
+RESOLUÇÃO:  Mudar o sistema de login de pop-up para redirect.
