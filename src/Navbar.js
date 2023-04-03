@@ -37,11 +37,24 @@ export default function Navbar() {
 
 getRedirectResult(auth)
 .then((result) => {
+  
   // This gives you a Google Access Token. You can use it to access Google APIs.
   const credential = GoogleAuthProvider.credentialFromResult(result);
   const token = credential.accessToken;
   // The signed-in user info.
   const user = result.user;
+
+  //Email Check
+  var userDomain = user.email.split("@")
+  userDomain = userDomain[1]
+
+  if (userDomain === "espeniche.pt") {
+    console.log("Email da escola!")
+  } else {
+    window.alert("Usa o email da escola!")
+    return
+  }
+
   setUserData(user)
   user.metadata.creationTime === user.metadata.lastSignInTime ? addUserToDb(user): console.log("Já tem conta!")
   console.log("Sign In succesful!", user)
@@ -49,7 +62,7 @@ getRedirectResult(auth)
 }).catch((error) => {
   // Handle Errors here.
   const errorCode = error.code;
-  console.log(error)
+  console.log(errorCode ? errorCode : "Sem Login pedido, sem preocupação!")
 
   if (errorCode) {
     const errorMessage = error.message;

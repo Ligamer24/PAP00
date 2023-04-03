@@ -35,15 +35,15 @@ export async function getUsers() {
 }
 
 export async function addUserToDb(user) {
-  console.log("ooooooooooooooooooooh yeah")
+  
+  //Class
   var userClass = user.displayName.split(" ")
   userClass = userClass[userClass.length-1]
 
-  //console.log(typeof(+userClass[userClass.length - 2]) == "number")
-
-  /*if (typeof(+userClass[userClass.length - 2]) == "number") {
-    console.log(userClass[userClass.length - 2])
-  }*/
+  //Student/Teacher Check
+  var userEmail = user.email.split("@")
+  var userEmailFH = userEmail[0];
+  +userEmailFH[userEmailFH.length-1] === +userEmailFH[userEmailFH.length-1] ? console.log("aluno") : userClass = "Professor@";
 
   //Username
   var userDesiredName = prompt("Insira o seu username:")
