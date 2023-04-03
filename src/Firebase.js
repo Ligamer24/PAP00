@@ -2,6 +2,8 @@ import { initializeApp } from "firebase/app";
 import { collection, doc, getFirestore, setDoc, getDocs, query, orderBy } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
+var blockedLetters = "éêèúûùíîìóôòõáâàãç"
+blockedLetters = blockedLetters.split("")
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -46,15 +48,7 @@ export async function addUserToDb(user) {
   +userEmailFH[userEmailFH.length-1] === +userEmailFH[userEmailFH.length-1] ? console.log("aluno") : userClass = "Professor@";
 
   //Username
-  var userDesiredName = prompt("Insira o seu username:")
-  var userNameConfirm = window.confirm(userDesiredName + " é o username que quer? ATENÇÃO: CASO QUEIRAS MUDAR, TERÁS DE CONTACTAR COM O RESPONSÁVEL DO PROJETO", false);
-
-  while (userNameConfirm == false) {
-    userDesiredName = prompt("Insira o seu username:")
-    userNameConfirm = window.confirm(userDesiredName + " é o username que quer? ATENÇÃO: CASO QUEIRAS MUDAR, TERÁS DE CONTACTAR COM O RESPONSÁVEL DO PROJETO", false);
-
-  }
-  user.displayName = userDesiredName
+  user.displayName = usernamePrompt()
 
   if (user.displayName) {
     await setDoc(doc(db, "users", user.uid), {
@@ -66,3 +60,36 @@ export async function addUserToDb(user) {
   
 }
 
+function usernamePrompt() {
+  let userDesiredName = undefined
+  let userNameConfirm = false
+  let blockedLetter = null
+
+  while (userNameConfirm === false) {
+    userDesiredName = prompt(blockedLetter ? ("'" + blockedLetter + "' não é uma letra válida no username! ") : "" + "Insira o seu username:")
+    userDesiredName = userDesiredName.replace(/\s/g, "");
+    userNameConfirm = window.confirm("'" + userDesiredName + "' é o username que quer? ATENÇÃO: CASO QUEIRAS MUDAR, TERÁS DE CONTACTAR COM O RESPONSÁVEL DO PROJETO", false);
+
+    let userDesiredNameLetters = userDesiredName.split("")
+    console.log(userDesiredNameLetters)
+
+    for (let i = 0; i < userDesiredNameLetters.length; i++) {
+      for (let j = 0; j < blockedLetters.length; j++) {
+        if (userDesiredNameLetters[i] === blockedLetters[j]) {
+          console.log(userDesiredNameLetters[i])
+          blockedLetter = userDesiredNameLetters[i]
+          userNameConfirm = false
+          break
+        } else if (userDesiredNameLetters[i] === blockedLetters[j].toUpperCase()) {
+          console.log(userDesiredNameLetters[i])
+          blockedLetter = userDesiredNameLetters[i]
+          userNameConfirm = false
+          break
+        } else {
+          console.log("Sem problema!")
+        }
+      }
+    }
+  }
+  return userDesiredName;
+}
