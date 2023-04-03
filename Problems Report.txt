@@ -10,3 +10,7 @@ RESOLUÇÃO:  Usar uma ferramenta CRACO para criar e editar json packages e conf
 
 -Não funcionava pois ao dar login, o foco estava na janela do mesmo.
 RESOLUÇÃO:  Mudar o sistema de login de pop-up para redirect.
+
+--Problema com ternary operator
+
+-A vírgula é necessária para fechar a condição. Caso contrário, se a condição retornar verdadeiro ela vai responder com as intruções do lado falso.
