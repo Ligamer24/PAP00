@@ -4,6 +4,8 @@ import trophy from "./Images/trophy.png";
 
 export default function Main() {
   return (
+    <>
+    <h1 id="title">Home</h1>
     <div className="main">
       <h1>Bem-Vindo Jogador(a)</h1>
       <div className="content">
@@ -15,5 +17,6 @@ export default function Main() {
         </div>
       </div>
     </div>
+    </>
   );
 }

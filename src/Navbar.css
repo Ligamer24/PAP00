@@ -26,7 +26,6 @@
 }
 
 .navbar a {
-  width: 20vw;
   text-align: center;
   font-size: 1.5vw;
   padding: 1vh 0;
@@ -37,14 +36,18 @@
   padding: .5vh .5vw;
 }
 
-.navbar > img {
+.navbar > a > img {
   position: absolute;
   width: 10vw;
   padding: 1vw;
 
   border: 0.5vw solid grey;
   border-radius: 999px;
-  translate: 300% 10%;
+  translate: 40% -40%;
   z-index: 0;
   background-color: rgb(20, 20, 20);
+}
+
+.navbar > a > img:hover {
+  cursor: pointer;
 }

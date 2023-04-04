@@ -2,11 +2,14 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //Style
-import "./index.css"
+import "./index.css";
 //Pages
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Leaderboard from "./pages/Leaderboard";
+import Rules from "./pages/Rules";
+import About from "./pages/About";
+import Code from "./pages/Code";
 //Firebase
 import {auth} from "./Firebase";
 import { onAuthStateChanged } from "firebase/auth";
@@ -23,6 +26,9 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="leaderboard" element={<Leaderboard />} />
+          <Route path="rules" element={<Rules />} />
+          <Route path="about" element={<About />} />
+          <Route path="code" element={<Code />} />
         </Route>
       </Routes>
     </BrowserRouter>
