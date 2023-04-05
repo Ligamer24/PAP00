@@ -86,10 +86,6 @@ function userSignOut() {
   })
 }
 
-function goToCodePage() {
-  window.location.href = "http://localhost:3000/code";
-}
-
 function showLogoMessage() {
   alert("Dá Login para entrares aqui...")
 }
@@ -100,7 +96,7 @@ function showLogoMessage() {
       <div className="navbar">
       <button onClick={userData ? userSignOut : googleAuth}>{userData ? userData.email : "Login"}</button>
 
-        <Link to="/code"><img src={logo} alt="" /></Link>
+        {userData ? <Link to="/code"><img src={logo} alt="" /></Link> : <img src={logo} alt="" onClick={showLogoMessage}/>}
         <div className="pages">
           <Link to="/">Home</Link>
           <Link to="/leaderboard">Pontos</Link>
