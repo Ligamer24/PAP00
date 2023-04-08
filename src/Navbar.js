@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
-import logo from "./Images/winner.png";
+import logo from "./Images/logo.png";
 import { Link } from "react-router-dom";
 import { auth, addUserToDb} from "./Firebase";
 import { GoogleAuthProvider, signInWithPopup, signOut, signInWithRedirect, getRedirectResult} from "firebase/auth";
