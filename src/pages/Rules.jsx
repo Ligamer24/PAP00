@@ -1,5 +1,5 @@
 import "../Rules.css"
-import r1Img from "../Images/checklist.png"
+import r1Img from "../Images/keyword.png"
 
 
 export default  function Rules() {

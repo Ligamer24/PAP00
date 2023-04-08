@@ -1,5 +1,6 @@
 import "../About.css"
-import r1Img from "../Images/checklist.png"
+import img1 from "../Images/calendar.png"
+import img2 from "../Images/team.png"
 
 export default  function About() {
     return (
@@ -19,7 +20,7 @@ export default  function About() {
                             </p>
 
                         </div>
-                        <img src={r1Img} />
+                        <img src={img1} />
                     </div>
                 </div>
 
@@ -33,7 +34,21 @@ export default  function About() {
                             <p>Queres formar um grupo com @s amig@s? Embora tenha um pequeno porem, podes contar com isso!</p>
                             <p></p>
                         </div>
-                        <img src={r1Img} />
+                        <img src={img2} />
+                    </div>
+                </div>
+
+                <div id="rule">
+                    <h2>Para quem?</h2>
+                    <div id="info">
+                        <div id="desc">
+                            <p>Extendendo-se ao fim do 3º periodo, em qualquer altura podes entrar no jogo!</p>
+                            <p>Gostas de competir? Mostra quem manda no quadro de pontos!</p>
+                            <p>Pessoa casual? Tens a liberdade de ir nas calmas e poder chegar ao fim sem pressas.</p>
+                            <p>Queres formar um grupo com @s amig@s? Embora tenha um pequeno porem, podes contar com isso!</p>
+                            <p></p>
+                        </div>
+                        <iframe src="https://www.youtube.com/embed/0mqqbuM9sAk" title="I Built 4 Businesses In A Row To Show It&#39;s Not Luck" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
                 </div>
                 
@@ -41,3 +56,4 @@ export default  function About() {
         </>
     )
 }
+
