@@ -45,7 +45,7 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    border: 0.2rem solid rgb(150, 150, 150);
+    border: 0.2vw solid rgb(150, 150, 150);
     animation: 3s ease-in-out div-entry;
 }
 
@@ -54,23 +54,24 @@ tr, th, td {
 }
 
 tr {
-    border-bottom: 0.0625rem solid rgb(150, 150, 150);
+    border-bottom: 0.1vw solid rgb(150, 150, 150);
     background-color: black;
     color: white;
     font-family: "arcade";
 }
 
 .headRow {
-    border: 0.2rem solid rgb(150, 150, 150);
+    border: 0.2vw solid rgb(150, 150, 150);
 }
 
 th h1 {
     margin: 1vw 1vh;
-    font-size: clamp(1rem, 3vw, 3rem);
+    font-size: 3vw;
 }
 
 td {
-    font-size: clamp(1rem, 2vw, 2rem);
-    padding: 1.875rem;
+    font-size: 2vw;
+    padding: 2vh 2vw;
+    height: 8vw;
     text-align: center;
 }
