@@ -42,3 +42,7 @@ button:hover {
   color: rgb(20, 20, 20);
   background-color: white;
 }
+
+#rulesContainer, .main {
+  animation: 2s ease-in-out div-entry;
+}

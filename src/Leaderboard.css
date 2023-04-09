@@ -1,3 +1,14 @@
+@keyframes title-entry {
+    0% {
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 #title {
     margin: clamp(0.2rem, 2vh, 2rem) clamp(1rem, 10vh, 10rem);/*0.625rem 3.125rem;*/
     margin-right: clamp(2rem, 30vw, 20rem);
@@ -10,6 +21,7 @@
     color: white;
 
     border-bottom: 0.1625rem solid rgb(200, 200, 200);
+    animation: .5s ease-in-out title-entry;
 }
 
 /*Espaço para o menu formatation caso dê não muito bem*/
@@ -19,10 +31,22 @@
     text-align: center;
 }
 
+@keyframes div-entry {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     border: 0.2rem solid rgb(150, 150, 150);
+    animation: 3s ease-in-out div-entry;
 }
 
 tr, th, td {

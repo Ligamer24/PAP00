@@ -1,3 +1,14 @@
+@keyframes navbar-scale {
+  0% {
+    opacity: 0;
+    scale: 1.5;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -9,6 +20,7 @@
   padding: 3vh 0;
 
   border: 0.25vw solid grey;
+  animation: 1s ease-in-out navbar-scale;
 }
 
 .navbar button {
@@ -58,6 +70,7 @@
   translate: 300% 10%;
   z-index: 0;
   background-color: rgb(20, 20, 20);
+  /* animation: 2s ease-in-out img-scale; */
 }
 
 .navbar > a > img:hover, .navbar > img:hover {
