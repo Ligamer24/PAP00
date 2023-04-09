@@ -15,7 +15,7 @@ export default  function Rules() {
                             <p>Apenas quem faz parte  <u><i>ESP</i></u> pode jogar!</p>
                             <p>És alun@, professor@ ou funcionári@? Força! Estás à vontade de jogar!</p>
                         </div>
-                        <img src={r1Img} />
+                        <img src={r1Img} alt=""/>
                     </div>
                 </div>
 
@@ -26,7 +26,7 @@ export default  function Rules() {
                             <p>Lorem Ispum Lorem Ispum Lorem Ispum</p>
                             <p>Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum Lorem Ispum</p>
                         </div>
-                        <img src={r1Img} />
+                        <img src={r1Img} alt=""/>
                     </div>
                 </div>
                 

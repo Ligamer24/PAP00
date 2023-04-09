@@ -67,9 +67,9 @@ function usernamePrompt() {
   let blockedLetter = null
 
   while (userNameConfirm === false) {
-    userDesiredName = prompt(blockedLetter ? ("'" + blockedLetter + "' não é uma letra válida no username! ") : "" + "Insira o seu username:")
+    userDesiredName = prompt(blockedLetter ? (`'${blockedLetter}' não é uma letra válida no username! `) : "Insira o seu username:")
     userDesiredName = userDesiredName.replace(/\s/g, "");
-    userNameConfirm = window.confirm("'" + userDesiredName + "' é o username que quer? ATENÇÃO: CASO QUEIRAS MUDAR, TERÁS DE CONTACTAR COM O RESPONSÁVEL DO PROJETO", false);
+    userNameConfirm = window.confirm(`'${userDesiredName}' é o username que quer? ATENÇÃO: CASO QUEIRAS MUDAR, TERÁS DE CONTACTAR COM O RESPONSÁVEL DO PROJETO`, false);
 
     let userDesiredNameLetters = userDesiredName.split("")
     console.log(userDesiredNameLetters)

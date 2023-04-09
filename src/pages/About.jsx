@@ -20,7 +20,7 @@ export default  function About() {
                             </p>
 
                         </div>
-                        <img src={img1} />
+                        <img src={img1} alt=""/>
                     </div>
                 </div>
 
@@ -34,12 +34,12 @@ export default  function About() {
                             <p>Queres formar um grupo com @s amig@s? Embora tenha um pequeno porem, podes contar com isso!</p>
                             <p></p>
                         </div>
-                        <img src={img2} />
+                        <img src={img2} alt=""/>
                     </div>
                 </div>
 
                 <div id="rule">
-                    <h2>Para quem?</h2>
+                    <h2>Como funciona?</h2>
                     <div id="info">
                         <div id="desc">
                             <p>Extendendo-se ao fim do 3º periodo, em qualquer altura podes entrar no jogo!</p>

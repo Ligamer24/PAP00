@@ -33,6 +33,8 @@
 #rulesContainer > #rule > #info {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /*A little twist to rule2 div*/
