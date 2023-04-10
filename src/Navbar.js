@@ -38,14 +38,11 @@ export default function Navbar() {
 
 getRedirectResult(auth)
 .then((result) => {
-  console.log("1º")
   // This gives you a Google Access Token. You can use it to access Google APIs.
   //const credential = GoogleAuthProvider.credentialFromResult(result);
   //const token = credential.accessToken;
   // The signed-in user info.
-  console.log(result)
   const user = result.user;
-  console.log("3º")
 
   //Email Check
   var userDomain = user.email.split("@")
@@ -60,7 +57,7 @@ getRedirectResult(auth)
 
   setUserData(user)
   user.metadata.creationTime === user.metadata.lastSignInTime ? addUserToDb(user): console.log("Já tem conta!")
-  console.log("Sign In succesful!", user)
+  console.log("Sign In succesful!")
   getCurrentUser(user.uid);
 
 }).catch((error) => {
