@@ -48,7 +48,7 @@
   padding: .5vh .5vw;
 }
 
-.navbar .pages a img {
+.navbar .pages a img, .navbar button img {
   width: 1vw;
 }
 
@@ -77,6 +77,19 @@
   /* animation: 2s ease-in-out img-scale; */
 }
 
+@keyframes scale {
+  0%{
+    scale: 1;
+  }
+  50%{
+    scale: 1.2;
+  }
+  100%{
+    scale: 1;
+  }
+}
+
 .navbar > a > img:hover, .navbar > img:hover {
   cursor: pointer;
+  animation: 1s ease-in-out scale;
 }

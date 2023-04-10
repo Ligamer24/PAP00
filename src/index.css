@@ -77,7 +77,7 @@ button:hover {
   background-color: white;
 }
 
-a:hover > img {
+a:hover > img, button:hover > img {
   animation: .5s ease-in-out title-entry;
 }
 

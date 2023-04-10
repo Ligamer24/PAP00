@@ -95,7 +95,7 @@ function showLogoMessage() {
     
     <>
       <div className="navbar">
-      <button onClick={userData ? userSignOut : googleAuth}>{userData ? userData.email : "Login"}</button>
+      <button onClick={userData ? userSignOut : googleAuth}><img src={arrow} alt="" />{userData ? userData.email : "Login"}</button>
 
         {userData ? <Link to="/code"><img src={logo} alt="" /></Link> : <img src={logo} alt="" onClick={showLogoMessage}/>}
         <div className="pages">
