@@ -1,10 +1,20 @@
 import { initializeApp } from "firebase/app";
-import { collection, doc, getFirestore, setDoc, getDocs, query, orderBy } from "firebase/firestore";
+import { collection, doc, getFirestore, setDoc, getDoc, getDocs, query, orderBy } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
+
+const cue1 = [
+  "Se vencer o jogo é o que anseias",
+  "Os dez desafios terás que enfrentar",
+  "Para a tua jornada começar",
+  "No site terás que entrar"
+]
+
+export const cues = [
+  cue1
+] 
 
 var blockedLetters = "éêèúûùíîìóôòõáâàãç~^´`"
 blockedLetters = blockedLetters.split("")
-console.log(blockedLetters)
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -23,8 +33,6 @@ const db = getFirestore(app)
 //Initialize Authentication
 export const auth = getAuth(app)
 
-console.log("hi from firebase")
-
 export async function getUsers() {
   
   var usersArray = [];
@@ -35,6 +43,18 @@ export async function getUsers() {
     usersArray.push(doc.data())
   })
   return usersArray;
+}
+
+export async function getCurrentUser(userid) {
+  const docRef = doc(db, "users", userid);
+  const docSnap = await getDoc(docRef)
+
+  if (docSnap.exists()) {
+    console.log("User info:", docSnap.data())
+  } else {
+    console.log("Sem user!")
+  }
+
 }
 
 export async function addUserToDb(user) {
@@ -56,7 +76,8 @@ export async function addUserToDb(user) {
       Class: userClass,
       Name: user.displayName,
       Score: 0,
-      Email: user.email
+      Email: user.email,
+      Cue: 0
     })
   } else console.log("Não colocou o username!")
   

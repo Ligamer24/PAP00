@@ -3,7 +3,7 @@ import "./Navbar.css";
 import logo from "./Images/logo.png";
 import arrow from "./Images/arrow.png";
 import { Link } from "react-router-dom";
-import { auth, addUserToDb} from "./Firebase";
+import { auth, addUserToDb, getCurrentUser} from "./Firebase";
 import { GoogleAuthProvider, signOut, signInWithRedirect, getRedirectResult} from "firebase/auth";
 
 
@@ -38,12 +38,14 @@ export default function Navbar() {
 
 getRedirectResult(auth)
 .then((result) => {
-  
+  console.log("1º")
   // This gives you a Google Access Token. You can use it to access Google APIs.
   //const credential = GoogleAuthProvider.credentialFromResult(result);
   //const token = credential.accessToken;
   // The signed-in user info.
+  console.log(result)
   const user = result.user;
+  console.log("3º")
 
   //Email Check
   var userDomain = user.email.split("@")
@@ -59,6 +61,7 @@ getRedirectResult(auth)
   setUserData(user)
   user.metadata.creationTime === user.metadata.lastSignInTime ? addUserToDb(user): console.log("Já tem conta!")
   console.log("Sign In succesful!", user)
+  getCurrentUser(user.uid);
 
 }).catch((error) => {
   // Handle Errors here.
