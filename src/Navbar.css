@@ -44,8 +44,12 @@
 }
 
 .navbar .pages a {
-  margin: 0 1vw;
+  margin: 0 .5vw;
   padding: .5vh .5vw;
+}
+
+.navbar .pages a img {
+  width: 1vw;
 }
 
 .navbar > a > img {

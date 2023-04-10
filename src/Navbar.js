@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./Navbar.css";
 import logo from "./Images/logo.png";
+import arrow from "./Images/arrow.png";
 import { Link } from "react-router-dom";
 import { auth, addUserToDb} from "./Firebase";
-import { GoogleAuthProvider, signInWithPopup, signOut, signInWithRedirect, getRedirectResult} from "firebase/auth";
+import { GoogleAuthProvider, signOut, signInWithRedirect, getRedirectResult} from "firebase/auth";
 
 
 
@@ -39,8 +40,8 @@ getRedirectResult(auth)
 .then((result) => {
   
   // This gives you a Google Access Token. You can use it to access Google APIs.
-  const credential = GoogleAuthProvider.credentialFromResult(result);
-  const token = credential.accessToken;
+  //const credential = GoogleAuthProvider.credentialFromResult(result);
+  //const token = credential.accessToken;
   // The signed-in user info.
   const user = result.user;
 
@@ -98,10 +99,10 @@ function showLogoMessage() {
 
         {userData ? <Link to="/code"><img src={logo} alt="" /></Link> : <img src={logo} alt="" onClick={showLogoMessage}/>}
         <div className="pages">
-          <Link to="/">Home</Link>
-          <Link to="/leaderboard">Pontos</Link>
-          <Link to="/rules">Regras</Link>
-          <Link to="/about">Sobre</Link>
+          <Link to="/"><img src={arrow} alt="" />Home</Link>
+          <Link to="/leaderboard"><img src={arrow} alt="" />Pontos</Link>
+          <Link to="/rules"><img src={arrow} alt="" />Regras</Link>
+          <Link to="/about"><img src={arrow} alt="" />Sobre</Link>
         </div>
       </div>
     </>

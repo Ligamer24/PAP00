@@ -32,6 +32,10 @@
     margin-left: 10vw;
 }
 
+.main > .content > .desc > a > img {
+    width: 3vw;
+}
+
 .main > .content > .desc > p {
     margin: 2rem 0;
 }

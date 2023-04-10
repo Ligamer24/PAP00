@@ -1,6 +1,7 @@
 import "./Main.css";
 import { Link } from "react-router-dom";
-import trophy from "./Images/trophy.png";
+import start from "./Images/start-button.png";
+import arrow from "./Images/arrow.png"
 
 export default function Main() {
   return (
@@ -9,11 +10,11 @@ export default function Main() {
     <div className="main">
       <h1>Bem-Vindo Jogador(a)</h1>
       <div className="content">
-        <img src={trophy} alt="" />
+        <img src={start} alt="" />
         <div className="desc">
-          <Link to="/leaderboard">Pontos</Link>
-          <Link to="/rules">Regras</Link>
-          <Link to="/about">Sobre</Link>
+          <Link to="/leaderboard"><img src={arrow} width={"3vw"} alt="" />Pontos</Link>
+          <Link to="/rules"><img src={arrow} width={"3vw"} alt="" />Regras</Link>
+          <Link to="/about"><img src={arrow} width={"3vw"} alt="" />Sobre</Link>
         </div>
       </div>
     </div>
