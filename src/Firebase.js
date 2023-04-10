@@ -55,7 +55,8 @@ export async function addUserToDb(user) {
     await setDoc(doc(db, "users", user.uid), {
       Class: userClass,
       Name: user.displayName,
-      Score: 0
+      Score: 0,
+      Email: user.email
     })
   } else console.log("Não colocou o username!")
   
