@@ -1,11 +1,20 @@
 import "../Code.css"
-import { cues } from "../Firebase"
+import { cues, getCurrentUser } from "../Firebase"
+import { playerData } from "../Navbar"
 import img1 from "../Images/secure.png"
 
+
+if (playerData) {
+    var userData = await getCurrentUser(playerData.uid)
+    console.log(userData)
+}
+
 export default function Code() {
+    
     const cue = cues[0]
     return (
-        <>
+        playerData ? 
+        (<>
             <h1 id="title">Codigo</h1>
             <div id="rulesContainer">
 
@@ -31,6 +40,8 @@ export default function Code() {
                     </div>
                 </div>
             </div>
-        </>
+        </>)
+        :
+        (<h1>Malandr@. Faz Login!</h1>)
     )
 }

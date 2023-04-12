@@ -3,44 +3,21 @@ import "./Navbar.css";
 import logo from "./Images/logo.png";
 import arrow from "./Images/arrow.png";
 import { Link } from "react-router-dom";
-import { auth, addUserToDb, getCurrentUser} from "./Firebase";
+import { auth, addUserToDb} from "./Firebase";
 import { GoogleAuthProvider, signOut, signInWithRedirect, getRedirectResult} from "firebase/auth";
 
-
-
-
+export var playerData
 export default function Navbar() {
-  const [userData, setUserData] = useState(null)
+  const [userData, setUserData] = useState(null);
+  playerData = userData;
+  console.log("Navbar:", playerData)
 
   function googleAuth() {
     signInWithRedirect(auth, new GoogleAuthProvider());
-
-    
-
-
-    /*signInWithPopup(auth, new GoogleAuthProvider())
-  .then((result) => {    
-    const user = result.user;
-    setUserData(user)
-    user.metadata.creationTime === user.metadata.lastSignInTime ? addUserToDb(user): console.log("Já tem conta!")
-    console.log("Sign In succesful!", user)
-  }).catch((error) => {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // The email of the user's account used.
-    const email = error.customData.email;
-    // The AuthCredential type that was used.
-    const credential = GoogleAuthProvider.credentialFromError(error);
-    console.log("Error:", errorCode, errorMessage, email, credential)
-  });*/
-}
+  }
 
 getRedirectResult(auth)
-.then((result) => {
-  // This gives you a Google Access Token. You can use it to access Google APIs.
-  //const credential = GoogleAuthProvider.credentialFromResult(result);
-  //const token = credential.accessToken;
+.then(async (result) => {
   // The signed-in user info.
   const user = result.user;
 
@@ -58,7 +35,7 @@ getRedirectResult(auth)
   setUserData(user)
   user.metadata.creationTime === user.metadata.lastSignInTime ? addUserToDb(user): console.log("Já tem conta!")
   console.log("Sign In succesful!")
-  getCurrentUser(user.uid);
+
 
 }).catch((error) => {
   // Handle Errors here.

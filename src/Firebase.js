@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { collection, doc, getFirestore, setDoc, getDoc, getDocs, query, orderBy } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const cue1 = [
   "Se vencer o jogo é o que anseias",
@@ -33,6 +33,20 @@ const db = getFirestore(app)
 //Initialize Authentication
 export const auth = getAuth(app)
 
+
+
+export async function getCurrentUser(userid) {
+  const docRef = doc(db, "users", userid);
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    return docSnap.data();
+  } else {
+    console.log("Sem user!");
+    return null;
+  };
+}
+
 export async function getUsers() {
   
   var usersArray = [];
@@ -43,18 +57,6 @@ export async function getUsers() {
     usersArray.push(doc.data())
   })
   return usersArray;
-}
-
-export async function getCurrentUser(userid) {
-  const docRef = doc(db, "users", userid);
-  const docSnap = await getDoc(docRef)
-
-  if (docSnap.exists()) {
-    console.log("User info:", docSnap.data())
-  } else {
-    console.log("Sem user!")
-  }
-
 }
 
 export async function addUserToDb(user) {
