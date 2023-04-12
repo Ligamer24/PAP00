@@ -33,11 +33,41 @@ const cue5 = [
   "5"
 ]
 
+const cue6 = [
+  "6",
+  "6",
+  "6",
+  "6"
+]
+
+const cue7 = [
+  "7",
+  "7",
+  "7",
+  "7"
+]
+
+const cue8 = [
+  "8",
+  "8",
+  "8",
+  "8"
+]
+
+const cue9 = [
+  "9",
+  "9",
+  "9",
+  "9"
+]
 export const cues = [
     cue1,
     cue2,
     cue3,
     cue4,
-    cue5
-
+    cue5,
+    cue6,
+    cue7,
+    cue8,
+    cue9
 ] 
