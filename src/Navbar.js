@@ -6,18 +6,15 @@ import { Link } from "react-router-dom";
 import { auth, addUserToDb} from "./Firebase";
 import { GoogleAuthProvider, signOut, signInWithRedirect, getRedirectResult} from "firebase/auth";
 
-export var playerData
 export default function Navbar() {
   const [userData, setUserData] = useState(null);
-  playerData = userData;
-  console.log("Navbar:", playerData)
 
   function googleAuth() {
     signInWithRedirect(auth, new GoogleAuthProvider());
   }
 
 getRedirectResult(auth)
-.then(async (result) => {
+.then((result) => {
   // The signed-in user info.
   const user = result.user;
 
@@ -40,7 +37,6 @@ getRedirectResult(auth)
 }).catch((error) => {
   // Handle Errors here.
   const errorCode = error.code;
-  console.log(errorCode ? errorCode : "Sem Login pedido, sem preocupação!")
 
   if (errorCode) {
     const errorMessage = error.message;

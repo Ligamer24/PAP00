@@ -1,21 +1,32 @@
 import "../Code.css"
-import { cues, getCurrentUser } from "../Firebase"
-import { playerData } from "../Navbar"
+import { cues } from "../Cues"
+import { onAuthStateChanged } from "firebase/auth"
+import { auth, getCurrentUser } from "../Firebase"
 import img1 from "../Images/secure.png"
+import { useState } from "react"
 
-
-if (playerData) {
-    var userData = await getCurrentUser(playerData.uid)
-    console.log(userData)
-}
 
 export default function Code() {
+    const [pCue, setPCue] = useState(0);
+
+    let listener = onAuthStateChanged(auth, async (user) => {
+        if (user) {
+            const playerData = await getCurrentUser(user.uid);
+            console.log(playerData)
+            setPCue(playerData.Cue)                             
+            
+        } else {
+            console.log("Not signed in!")
+        }
+    })
     
-    const cue = cues[0]
+    listener();
+
+    const cue = cues[pCue]
     return (
-        playerData ? 
-        (<>
-            <h1 id="title">Codigo</h1>
+        
+        <>
+            <h1 id="title">Codigo{pCue}</h1>
             <div id="rulesContainer">
 
                 <div id="rule">
@@ -40,8 +51,6 @@ export default function Code() {
                     </div>
                 </div>
             </div>
-        </>)
-        :
-        (<h1>Malandr@. Faz Login!</h1>)
+        </>
     )
 }

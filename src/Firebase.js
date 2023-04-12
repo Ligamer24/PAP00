@@ -2,16 +2,6 @@ import { initializeApp } from "firebase/app";
 import { collection, doc, getFirestore, setDoc, getDoc, getDocs, query, orderBy } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-const cue1 = [
-  "Se vencer o jogo é o que anseias",
-  "Os dez desafios terás que enfrentar",
-  "Para a tua jornada começar",
-  "No site terás que entrar"
-]
-
-export const cues = [
-  cue1
-] 
 
 var blockedLetters = "éêèúûùíîìóôòõáâàãç~^´`"
 blockedLetters = blockedLetters.split("")
