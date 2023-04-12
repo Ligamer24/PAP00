@@ -26,7 +26,7 @@ export default function Code() {
     return (
         
         <>
-            <h1 id="title">Codigo{pCue}</h1>
+            <h1 id="title">Codigo[{pCue}/9]</h1>
             <div id="rulesContainer">
 
                 <div id="rule">
