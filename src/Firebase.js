@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { collection, doc, getFirestore, setDoc, getDoc, getDocs, query, orderBy } from "firebase/firestore";
+import { collection, doc, getFirestore, setDoc, getDoc, getDocs, query, orderBy, updateDoc } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 
@@ -24,6 +24,14 @@ const db = getFirestore(app)
 export const auth = getAuth(app)
 
 
+
+export async function updatePlayerData(score, cue, user) {
+  console.log(user)
+  await updateDoc(doc(db, "users", user.uid), {
+    Score: score + 123,
+    // Cue: cue + 1
+  })
+}
 
 export async function getCurrentUser(userid) {
   const docRef = doc(db, "users", userid);
