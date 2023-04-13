@@ -14,9 +14,10 @@ export default function Navbar() {
   }
 
   let listener = onAuthStateChanged(auth, async (user) => {
-    console.log("listener!")
     setUserData(user)
   })
+
+  listener()
 
 getRedirectResult(auth)
 .then((result) => {

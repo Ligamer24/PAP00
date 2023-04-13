@@ -39,7 +39,7 @@
     margin-right: 10vw;
 }
 
-#rulesContainer > #rule > #info > #desc > p, #rulesContainer > #rule2 > #info > #desc > p {
+#rulesContainer > #rule > #info > #desc > p, #rulesContainer > #rule2 > #info > #desc > p {    
     width: 50vw;
 
     line-height: 1.6;

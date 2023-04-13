@@ -62,7 +62,8 @@ export default function Code() {
             input.current.value = ""
             setIsCodeRight(true)
             updatePlayerData(pScore, pCue, userData.current)
-            console.log("niceeeeeeeee")
+        } else {
+            window.alert("Código errado!")
         }
     }
 

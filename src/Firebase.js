@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { collection, doc, getFirestore, setDoc, getDoc, getDocs, query, orderBy, updateDoc } from "firebase/firestore";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 
 var blockedLetters = "éêèúûùíîìóôòõáâàãç~^´`"
@@ -66,6 +66,7 @@ export async function addUserToDb(user) {
   //Student/Teacher Check
   var userEmail = user.email.split("@")
   var userEmailFH = userEmail[0];
+  // eslint-disable-next-line
   +userEmailFH[userEmailFH.length-1] === +userEmailFH[userEmailFH.length-1] ? console.log("aluno") : userClass = "Professor@";
 
   //Username

@@ -1,12 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap');
 
-#rulesContainer > #rule > #info > #desc > input {
+#rulesContainer > #rule > #info > #desc > input, #rulesContainer > #rule > #info > #desc > button {
     background-color: rgb(20,20,20);
     border: 2px solid gray;
     border-radius: 2vw;
     height: 10vh;
     width: 25vw;
+    margin: 1vw;
     font-size: 1vw;
+}
+
+#rulesContainer > #rule > #info > #desc > button {
+    background-color: gray;
+    color: rgb(20,20,20);
+    border: 2px solid rgb(20,20,20);
+}
+
+#rulesContainer > #rule > #info > #desc > button:hover {
+    background-color: rgb(20,20,20);
+    color: gray;
+    border: 2px solid gray;
 }
 
 #rulesContainer > #rule2 > #cue {
