@@ -23,6 +23,5 @@ compreendi que não é possível exportar qualquer tipo de variável dentro de u
 
 (Relembrando que cada componente é uma função, assim estava a tentar exportar uma variável em uma função dentro de outra) 
 
-Então criei uma varável fora da função e, relembrando a potencionalidade do "useState" do React, usei-a para igualá-la à variável "state".
-Sendo assim, poderia finalmente exportá-la e acede-la com a página "Code", atualizando a variável sempre que o "state"
-é mudado e assim garantir que as informações do jogador é sempre atualizado cada vez que faz "Login" ou "Sign Out"
+Como não conseguia forçar o "re-render" da variável em "state" em uma exportação, criei um "state" independente da navbar,
+coletando informações com o listener do firebase "OnAuthStateChanged()" e manipulando-as conforme o desejado
