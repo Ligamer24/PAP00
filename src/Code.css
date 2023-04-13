@@ -15,7 +15,7 @@
     margin: 0 10vw;
 }
 
-#rulesContainer > #rule2 > #cue > p {
+#rulesContainer > #rule2 > #cue > p, #cue > p {
     font-size: 1.8vw;
     font-family: "Silkscreen";
     font-style: italic;

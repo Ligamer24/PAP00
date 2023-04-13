@@ -4,7 +4,7 @@ import logo from "./Images/logo.png";
 import arrow from "./Images/arrow.png";
 import { Link } from "react-router-dom";
 import { auth, addUserToDb} from "./Firebase";
-import { GoogleAuthProvider, signOut, signInWithRedirect, getRedirectResult} from "firebase/auth";
+import { GoogleAuthProvider, signOut, signInWithRedirect, getRedirectResult, onAuthStateChanged} from "firebase/auth";
 
 export default function Navbar() {
   const [userData, setUserData] = useState(null);
@@ -12,6 +12,11 @@ export default function Navbar() {
   function googleAuth() {
     signInWithRedirect(auth, new GoogleAuthProvider());
   }
+
+  let listener = onAuthStateChanged(auth, async (user) => {
+    console.log("listener!")
+    setUserData(user)
+  })
 
 getRedirectResult(auth)
 .then((result) => {

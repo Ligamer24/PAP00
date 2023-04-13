@@ -12,6 +12,7 @@ export default function Code() {
     const [pName, setPName] = useState(undefined);
     const [isCodeRight, setIsCodeRight] = useState(false)
     let userData = useRef(undefined)
+    const input = useRef(undefined)
 
     let listener = onAuthStateChanged(auth, async (user) => {
         if (user) {
@@ -29,28 +30,42 @@ export default function Code() {
     
     listener()
 
-    function codeRight(username, score, cue, user) {
-        updatePlayerData(score, cue, user)
+    const cue = cues[pCue]
+
+    function codeRight(username, score) {
         return (
             <>
                 <p>Muito bem {username}!</p>
                 <p>Ganhaste {score} pontos!</p>
+                <p>Passaste para a fase seguinte!</p>
+                <div id="cue">
+                    <p>Para o jogo continuar,<br />
+                    Apenas precisas de recarregar</p>
+                </div>
             </>
         )
     }
 
-    function handleChange(event) {
-        let input = event.target.value
-        console.log(event)
-        if (input === "teste") {
+    // function handleChange(event) {
+    //     let input = event.target.value
+    //     if (input === cue[4]) {
+    //         console.log("yhyh")
+    //         setIsCodeRight(true)
+    //     }
+    //     else {
+    //         setIsCodeRight(false)
+    //     }
+    // }
+
+    function handleClick() {
+        if (input.current.value === cue[4]) {
+            input.current.value = ""
             setIsCodeRight(true)
-        }
-        else {
-            setIsCodeRight(false)
+            updatePlayerData(pScore, pCue, userData.current)
+            console.log("niceeeeeeeee")
         }
     }
 
-    const cue = cues[pCue]
     return (
         
         <>
@@ -61,8 +76,14 @@ export default function Code() {
                     <h2>Encontraste?</h2>
                     <div id="info">
                         <div id="desc">
-                            {!isCodeRight && <input placeholder="Insere o codigo!" onChange={handleChange}/>}
-                            {isCodeRight && codeRight(pName, pScore, pCue, userData.current)}
+                            {!isCodeRight && (
+                            <>
+                                <input placeholder="Insere o codigo!" ref={input}/>
+                                <button onClick={handleClick}>Verificar</button>
+                            </>
+                            )
+                            }
+                            {isCodeRight && codeRight(pName, pScore)}
                         </div>
                         <img src={img1} alt=""/>
                     </div>
