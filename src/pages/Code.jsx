@@ -40,7 +40,7 @@ export default function Code() {
             <>
                 <p>Muito bem {username}!</p>
                 <p>Ganhaste {score} pontos!</p>
-                <p>Passaste para a fase seguinte!</p>
+                {pCue === 9 ? <p>Parabéns!</p> : <p>Passaste para a fase seguinte!</p>}
                 <div id="cue">
                     <p>Para o jogo continuar,<br />
                     Apenas precisas de recarregar</p>
@@ -63,7 +63,7 @@ export default function Code() {
     return (
         
         <>
-            <h1 id="title">Codigo[{pCue}/9]</h1>
+            <h1 id="title">Codigo[{pCue + 1}/10]</h1>
             <div id="rulesContainer">
 
                 <div id="rule">
@@ -102,7 +102,7 @@ export default function Code() {
                             <div>
                             <p>Username: {pName}</p>
                             <p>Pontos: {pScore}</p>
-                            <p>Quadra: {pCue}</p>
+                            <p>Quadra: {pCue + 1}</p>
                             </div>
                         </div>
                     </div>

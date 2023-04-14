@@ -29,7 +29,7 @@ export async function updatePlayerData(score, cue, user) {
   console.log(user, score, cue)
   await updateDoc(doc(db, "users", user.uid), {
     Score: score + await getScoreValue(cue),
-    Cue: cue
+    Cue: (cue !== 9) ? cue + 1 : cue 
   })
 }
 
@@ -41,7 +41,7 @@ async function getScoreValue(pCue) {
   querySnapshot.forEach((doc) => {
     if (doc.data().Cue > pCue) {
       count += 1
-      console.log(doc.data())
+      console.log(doc.data(), count)
     }
   })
 

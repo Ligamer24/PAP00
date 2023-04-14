@@ -69,6 +69,14 @@ const cue9 = [
   "9",
   "123456789"
 ]
+
+const cue10 = [
+  "10",
+  "10",
+  "10",
+  "10",
+  "123"
+]
 export const cues = [
     cue1,
     cue2,
@@ -78,5 +86,6 @@ export const cues = [
     cue6,
     cue7,
     cue8,
-    cue9
+    cue9,
+    cue10
 ] 
