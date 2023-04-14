@@ -12,8 +12,8 @@ export default  function About() {
                     <h2>Isto? Um jogo!</h2>
                     <div id="info">
                         <div id="desc">
-                            <p>Porque nao tornar o quotidiano da escola um pouco mais divertido?</p>
-                            <p>Ate ao fim do 3º periodo podes participar e jogar!</p>
+                            <p>Porque não tornar o quotidiano da escola um pouco mais divertido?</p>
+                            <p>Até ao fim do 3º periodo podes participar e jogar!</p>
                             <p>
                                 Inexiste horas definidas para jogar, portanto se te der a vontade de explorar este jogo enquanto
                                 ficas no intervalo <del>ou na aula</del>, o que te impede de experimentar?
@@ -42,9 +42,10 @@ export default  function About() {
                     <h2>Como funciona?</h2>
                     <div id="info">
                         <div id="desc">
-                            <p>Extendendo-se ao fim do 3º periodo, em qualquer altura podes entrar no jogo!</p>
-                            <p>Gostas de competir? Mostra quem manda no quadro de pontos!</p>
-                            <p>Pessoa casual? Tens a liberdade de ir nas calmas e poder chegar ao fim sem pressas.</p>
+                            <p>Primeiro, como qualquer competição, existe regras.<br/> Não precisas de vê-las, mas se quiseres dar uma vista de olhos, vai à página Regras para te enquadrares.</p>
+                            <p><u>----Como Participar----</u></p>
+                            <p>Então, para começares a jogar tens primeiro que criar uma conta no jogo. Apenas precisas de entrar com o email da escola e a tua conta será criada.</p>
+                            <p>Após teres entrado com a tua conta, podes aceder à tua área de jogador@!</p>
                             <p>Queres formar um grupo com @s amig@s? Embora tenha um pequeno porem, podes contar com isso!</p>
                             <p></p>
                         </div>

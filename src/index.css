@@ -137,5 +137,5 @@ a:hover > img, button:hover > img {
 #rulesContainer > #rule > #info > #desc > p, #rulesContainer > #rule2 > #info > #desc > p {    
   width: 50vw;
 
-  line-height: 1.6;
+  /* line-height: 1.6; */
 }
