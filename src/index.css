@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap');
+
 @font-face {
   font-family: arcade;
   src: url(../public/fonts/arcade_font/ARCADE.ttf);
@@ -50,9 +52,10 @@ body {
 }
 
 
-p {
-  line-height: 1.6;
+p, i, del {
+  line-height: 2;
   font-size: 1.5vw;
+  font-family: "SilkScreen";
 }
 
 .navbar {
@@ -83,4 +86,56 @@ a:hover > img, button:hover > img {
 
 #rulesContainer, .main {
   animation: 2s ease-in-out div-entry;
+}
+
+/*  About and Rule Pages  */
+
+#rulesContainer {
+  padding: clamp(0.2rem, 2vh, 2rem) clamp(1rem, 10vh, 10rem);/*0.625rem 3.125rem;*/
+
+  background-color: rgba(20, 20, 20, .8);
+}
+
+#rulesContainer > #rule, #rulesContainer > #rule2 {
+  border-top: .2rem solid white;
+}
+
+#rulesContainer > #rule > h2,  #rulesContainer > #rule2 > h2{
+  font-size: clamp(1rem, 2vw, 3rem);
+  width: fit-content;
+  padding: 0rem 2rem 0.4rem 1rem;
+
+  border-bottom: 0.1625rem solid rgb(200, 200, 200);
+}
+
+#rulesContainer > #rule > #info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*A little twist to rule2 div*/
+
+#rulesContainer > #rule2 > #info {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#rulesContainer > #rule > #info > img {
+  width: 30vw;
+  margin-left: 10vw;
+}
+
+#rulesContainer > #rule2 > #info > img {
+  width: 30vw;
+  margin-right: 10vw;
+}
+
+#rulesContainer > #rule > #info > #desc > p, #rulesContainer > #rule2 > #info > #desc > p {    
+  width: 50vw;
+
+  line-height: 1.6;
 }

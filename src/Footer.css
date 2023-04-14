@@ -14,5 +14,9 @@ footer {
   margin-bottom: 0;
 
   border-top: 0.25vw solid gray;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+footer > p {
+  font-size: .75vw;
 }

@@ -13,12 +13,12 @@ RESOLUÇÃO:  Mudar o sistema de login de pop-up para redirect.
 
 --Problema com ternary operator
 
--A vírgula é necessária para fechar a condição. Caso contrário, se a condição retornar verdadeiro ela vai responder com as intruções do lado falso.
+RESOLUÇÃO: A vírgula é necessária para fechar a condição. Caso contrário, se a condição retornar verdadeiro ela vai responder com as intruções do lado falso.
 
 
 --Como partilhar a informação do jogador em diferentes para a página "Code"
 
--Inicialmente pretendia apenas exportar a variável da página "Navbar" e usá-la no "Code", mas após inúmeras tentativas
+RESOLUÇÃO:Inicialmente pretendia apenas exportar a variável da página "Navbar" e usá-la no "Code", mas após inúmeras tentativas
 compreendi que não é possível exportar qualquer tipo de variável dentro de uma função.
 
 (Relembrando que cada componente é uma função, assim estava a tentar exportar uma variável em uma função dentro de outra) 

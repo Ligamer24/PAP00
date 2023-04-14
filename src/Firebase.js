@@ -28,9 +28,28 @@ export const auth = getAuth(app)
 export async function updatePlayerData(score, cue, user) {
   console.log(user, score, cue)
   await updateDoc(doc(db, "users", user.uid), {
-    Score: score + 123,
-    Cue: cue + 1
+    Score: score + await getScoreValue(cue),
+    Cue: cue
   })
+}
+
+async function getScoreValue(pCue) {
+  const usersRef = collection(db, "users")
+  const q = query(usersRef, orderBy("Cue", "desc"))
+  const querySnapshot = await getDocs(q)
+  let count = 0
+  querySnapshot.forEach((doc) => {
+    if (doc.data().Cue > pCue) {
+      count += 1
+      console.log(doc.data())
+    }
+  })
+
+  if (count > 10) {
+    return 100;
+  } else {
+    return 1000 - 100*count;
+  }
 }
 
 export async function getCurrentUser(userid) {

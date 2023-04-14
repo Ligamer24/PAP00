@@ -40,5 +40,5 @@ export default function Leaderboard() {
 }
 
 const userData = await getUsers()
-console.log(userData)
+//console.log(userData)
 

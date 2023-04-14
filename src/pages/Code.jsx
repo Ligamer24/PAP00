@@ -12,6 +12,7 @@ export default function Code() {
     const [pName, setPName] = useState(undefined);
     const [isCodeRight, setIsCodeRight] = useState(false)
     let userData = useRef(undefined)
+    const oldPScore = useRef(undefined)
     const input = useRef(undefined)
 
     let listener = onAuthStateChanged(auth, async (user) => {
@@ -33,6 +34,7 @@ export default function Code() {
     const cue = cues[pCue]
 
     function codeRight(username, score) {
+        console.log(pScore, oldPScore)
         return (
             <>
                 <p>Muito bem {username}!</p>
@@ -46,20 +48,10 @@ export default function Code() {
         )
     }
 
-    // function handleChange(event) {
-    //     let input = event.target.value
-    //     if (input === cue[4]) {
-    //         console.log("yhyh")
-    //         setIsCodeRight(true)
-    //     }
-    //     else {
-    //         setIsCodeRight(false)
-    //     }
-    // }
-
     function handleClick() {
         if (input.current.value === cue[4]) {
             input.current.value = ""
+            oldPScore.current = pScore
             setIsCodeRight(true)
             updatePlayerData(pScore, pCue, userData.current)
         } else {
@@ -84,7 +76,7 @@ export default function Code() {
                             </>
                             )
                             }
-                            {isCodeRight && codeRight(pName, pScore)}
+                            {isCodeRight && codeRight(pName, pScore - oldPScore.current)}
                         </div>
                         <img src={img1} alt=""/>
                     </div>
