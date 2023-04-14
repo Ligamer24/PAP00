@@ -104,7 +104,6 @@ export default function Code() {
                             <p>Pontos: {pScore}</p>
                             <p>Quadra: {pCue}</p>
                             </div>
-                            <img src={userData.current.photoURL} alt=""/>
                         </div>
                     </div>
                 </div>
