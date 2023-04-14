@@ -20,6 +20,7 @@ export default function Code() {
             userData.current = user
             const playerData = await getCurrentUser(user.uid);
             console.log(playerData)
+            console.log(userData.current.photoURL)
             setPCue(playerData.Cue)
             setPScore(playerData.Score)
             setPName(playerData.Name)
@@ -97,9 +98,13 @@ export default function Code() {
                 <div id="rule">
                     <h2>Perfil</h2>
                     <div id="info">
-                        <div id="desc">
+                        <div id="profile-desc">
+                            <div>
                             <p>Username: {pName}</p>
                             <p>Pontos: {pScore}</p>
+                            <p>Quadra: {pCue}</p>
+                            </div>
+                            <img src={userData.current.photoURL} alt=""/>
                         </div>
                     </div>
                 </div>

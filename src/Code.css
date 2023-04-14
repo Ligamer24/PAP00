@@ -21,6 +21,19 @@
     border: 2px solid gray;
 }
 
+#rulesContainer > #rule > #info > #profile-desc {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#rulesContainer > #rule > #info > #profile-desc > img {
+    border-radius: 10rem;
+    border: .5vw solid grey;
+    width: 10vw;
+}
+
 #rulesContainer > #rule2 > #cue {
     text-align: center;
 
