@@ -29,7 +29,7 @@ export async function updatePlayerData(score, cue, user) {
   console.log(user, score, cue)
   await updateDoc(doc(db, "users", user.uid), {
     Score: score + await getScoreValue(cue),
-    Cue: (cue !== 9) ? cue + 1 : cue 
+    Cue: (cue !== 10) ? cue + 1 : cue 
   })
 }
 
@@ -97,7 +97,7 @@ export async function addUserToDb(user) {
       Name: user.displayName,
       Score: 0,
       Email: user.email,
-      Cue: 0
+      Cue: 1
     })
   } else console.log("Não colocou o username!")
   

@@ -32,7 +32,7 @@ export default function Code() {
     
     listener()
 
-    const cue = cues[pCue]
+    const cue = cues[pCue ? pCue - 1 : console.log("sem index")]
 
     function codeRight(username, score) {
         console.log(pScore, oldPScore)
@@ -40,7 +40,7 @@ export default function Code() {
             <>
                 <p>Muito bem {username}!</p>
                 <p>Ganhaste {score} pontos!</p>
-                {pCue === 9 ? <p>Parabéns!</p> : <p>Passaste para a fase seguinte!</p>}
+                {pCue === 10 ? <p>Parabéns!</p> : <p>Passaste para a fase seguinte!</p>}
                 <div id="cue">
                     <p>Para o jogo continuar,<br />
                     Apenas precisas de recarregar</p>
@@ -50,7 +50,8 @@ export default function Code() {
     }
 
     function handleClick() {
-        if (input.current.value === cue[4]) {
+        
+        if (input.current.value.toLowerCase() === cue[4]) {
             input.current.value = ""
             oldPScore.current = pScore
             setIsCodeRight(true)
@@ -63,7 +64,7 @@ export default function Code() {
     return (
         
         <>
-            <h1 id="title">Codigo[{pCue + 1}/10]</h1>
+            <h1 id="title">Codigo[{pCue}/10]</h1>
             <div id="rulesContainer">
 
                 <div id="rule">
@@ -86,12 +87,15 @@ export default function Code() {
                 <div id="rule2">
                     <h2>Quadra</h2>
                     <div id="cue">
-                            <p id="cue-text">
-                                {cue[0]}<br/>
-                                {cue[1]}<br/>
-                                {cue[2]}<br/>
-                                {cue[3]}<br/>
-                            </p>
+                            {pCue ? 
+                                (<p id="cue-text">
+                                
+                                    {cue[0]}<br/>
+                                    {cue[1]}<br/>
+                                    {cue[2]}<br/>
+                                    {cue[3]}<br/>
+                                </p>) : <p id="cue-text">Loading</p>
+                            }
                             
                     </div>
                 </div>
@@ -102,7 +106,7 @@ export default function Code() {
                             <div>
                             <p>Username: {pName}</p>
                             <p>Pontos: {pScore}</p>
-                            <p>Quadra: {pCue + 1}</p>
+                            <p>Quadra: {pCue}</p>
                             </div>
                         </div>
                     </div>
