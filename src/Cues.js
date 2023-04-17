@@ -1,10 +1,18 @@
 const cue1 = [
-    "Se vencer o jogo é o que anseias",
-    "Os dez desafios terás que enfrentar",
-    "Para a tua jornada começar",
-    "No site terás que entrar",
-    "teste"
+    // "O primeiro passo são poucos os que dão",
+    // "O segundo já muitos desistirão",
+    
+    "Para este projeto viver",
+    "Existe uma única peça que o faz mover",
+    "De mim vem uma imensão gratidão",
+    "A essa peça que deste projeto fá-lo a manutenção",
+    "userName"
 ]
+
+// "Se vencer o jogo é o que anseias",
+// "Os dez desafios terás que enfrentar",
+// "Para a tua jornada começar",
+// "No site terás que entrar",
 
 const cue2 = [
   "2",

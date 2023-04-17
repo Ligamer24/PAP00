@@ -32,7 +32,7 @@ export default function Code() {
     
     listener()
 
-    const cue = cues[pCue ? pCue - 1 : console.log("sem index")]
+    const cue = cues[pCue ? pCue - 1 : console.log("sem index")] 
 
     function codeRight(username, score) {
         console.log(pScore, oldPScore)

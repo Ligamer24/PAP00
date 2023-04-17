@@ -25,3 +25,7 @@ compreendi que não é possível exportar qualquer tipo de variável dentro de u
 
 Como não conseguia forçar o "re-render" da variável em "state" em uma exportação, criei um "state" independente da navbar,
 coletando informações com o listener do firebase "OnAuthStateChanged()" e manipulando-as conforme o desejado
+
+//Nice tool 
+https://www.npmjs.com/package/bad-words
+https://www.npmjs.com/package/leo-profanity
