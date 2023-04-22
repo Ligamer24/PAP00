@@ -27,10 +27,12 @@ export const auth = getAuth(app)
 
 export async function updatePlayerData(score, cue, user) {
   console.log(user, score, cue)
+  const scoreValue = await getScoreValue(cue)
   await updateDoc(doc(db, "users", user.uid), {
-    Score: score + await getScoreValue(cue),
+    Score: score + scoreValue,
     Cue: (cue !== 10) ? cue + 1 : cue 
   })
+  console.log("A receber:", scoreValue)
 }
 
 async function getScoreValue(pCue) {
