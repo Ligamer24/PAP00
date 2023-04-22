@@ -48,7 +48,7 @@ export default  function About() {
                             <p>Após teres entrado com a tua conta, aparecerá o teu email escrito na barra do topo.</p>
                             <p>Assim já podes aceder à tua área de jogador(a)!</p>
                             <p>Também terás o nome que colocaste no <Link to="/leaderboard">quadro de pontos</Link>.</p>
-                            <p><u>---Zona de Jogador(a)</u></p>
+                            <p><u>----Zona de Jogador(a)----</u></p>
                             <p>Após teres entrado com a tua conta, podes aceder à tua área (ou zona) de jogador(a)</p>
                             <p>Para entrares, existe na barra do topo algo para clicares... tenta encontrar!</p>
                             <p>A zona de jogador(a) é onde podes ver o teu progresso e ler a quadra em que estás!</p>
