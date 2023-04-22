@@ -13,7 +13,7 @@ export default  function Rules() {
                     <div id="info">
                         <div id="desc">
                             <p>Apenas quem faz parte  <u><i>ESP</i></u> pode jogar!</p>
-                            <p>És alun@, professor@ ou funcionári@? Força! Estás à vontade de jogar!</p>
+                            <p>És aluno(a), docente ou não docente? Força! Estás à vontade de jogar!</p>
                         </div>
                         <img src={r1Img} alt=""/>
                     </div>

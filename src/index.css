@@ -9,6 +9,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+::selection {
+  background-color: rgb(80, 80, 80);
+}
+
 * {
   color: white;
   font-family: "arcade";
@@ -21,6 +25,15 @@ body {
 
   margin: 0px;
   min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+
+}
+
+ul li {
+  font-family: "Silkscreen";
 }
 
 /* Pages Title Style */
