@@ -1,48 +1,42 @@
 const cue1 = [
-    // "O primeiro passo são poucos os que dão",
-    // "O segundo já muitos desistirão",
-    
-    "Para este projeto viver",
-    "Existe uma única peça que o faz mover",
-    "De mim vem uma imensão gratidão",
-    "A essa peça que deste projeto fá-lo a manutenção",
-    "userName"
+    "Se vencer o jogo é o que anseias",
+    "Os dez desafios terás que enfrentar",
+    "Para a tua jornada começar",
+    "OK terás que digitar",
+    "ok"
 ]
 
-// "Se vencer o jogo é o que anseias",
-// "Os dez desafios terás que enfrentar",
-// "Para a tua jornada começar",
-// "No site terás que entrar",
+
 
 const cue2 = [
-  "2",
-  "2",
-  "2",
-  "2",
+  "Guardiãs que pelo sossego zelam",
+  "Em um corredor com três portas",
+  "Material e equipamento tem numa delas",
+  "Para lá entrar, às guardiãs deverás falar",
   "tttttt"
 ]
 
 const cue3 = [
-  "3",
-  "3",
-  "3",
-  "3",
+  "O primeiro passo são poucos os que dão",
+  "O segundo já muitos desistirão",
+  "O terceiro tens uma condição:",
+  "Da máquina ter um cupão",
   "woooooooow"
 ]
 
 const cue4 = [
-  "4",
-  "4",
-  "4",
-  "4",
+  "Para este projeto viver",
+  "Existe uma única peça que o faz mover",
+  "De mim vem uma imensão gratidão",
+  "A essa peça que deste projeto fá-lo a continuação",
   "hmhm"
 ]
 
 const cue5 = [
-  "5",
-  "5",
-  "5",
-  "5",
+  "Neste grande espaço escolar",
+  "Onde imensas divisões existem",
+  "Em uma está a guardar",
+  "O conhecimento que muitos hesitem",
   "z02320"
 ]
 
