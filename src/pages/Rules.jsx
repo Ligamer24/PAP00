@@ -1,5 +1,6 @@
 import "../Rules.css"
-import r1Img from "../Images/keyword.png"
+import r1Img from "../Images/school.png"
+import r2Img from "../Images/dependable.png"
 
 
 export default  function Rules() {
@@ -12,7 +13,7 @@ export default  function Rules() {
                     <h2>Regra 1</h2>
                     <div id="info">
                         <div id="desc">
-                            <p>Apenas quem faz parte  <u><i>ESP</i></u> pode jogar!</p>
+                            <p>Apenas quem faz parte da <u><i>ESP</i></u> pode jogar!</p>
                             <p>És aluno(a), docente ou não docente? Força! Estás à vontade de jogar!</p>
                         </div>
                         <img src={r1Img} alt=""/>
@@ -27,7 +28,7 @@ export default  function Rules() {
                             <p>Caso já saibas a resposta em alguma adivinha, evita dá-la diretamente a outra pessoa.</p>
                             <p>Assim deixas a competição justa e amigável!</p>
                         </div>
-                        <img src={r1Img} alt=""/>
+                        <img src={r2Img} alt=""/>
                     </div>
                 </div>
 
