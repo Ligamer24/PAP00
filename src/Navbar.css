@@ -58,7 +58,7 @@
   padding: 1vw;
 
   border: 0.5vw solid grey;
-  border-radius: 999px;
+  border-radius: 1vw;
   translate: -40% -40%;
   z-index: 0;
   background-color: rgb(20, 20, 20);
@@ -70,7 +70,7 @@
   padding: 1vw;
 
   border: 0.5vw solid grey;
-  border-radius: 999px;
+  border-radius: 1vw;
   translate: 300% 10%;
   z-index: 0;
   background-color: rgb(20, 20, 20);

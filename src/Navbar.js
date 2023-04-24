@@ -33,7 +33,7 @@ getRedirectResult(auth)
     console.log("Email da escola!")
   } else {
     window.alert("Usa o email da escola!")
-    //setUserData(null)
+    setUserData(null)
     return
   }
 
