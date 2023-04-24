@@ -54,9 +54,9 @@ export default  function About() {
                             <p>A zona de jogador(a) é onde podes ver o teu progresso e ler a quadra em que estás!</p>
                             <p>Se tiveres um palpite ou tenhas encontrado o código, é onde podes introduzi-lo.</p>
                             <ul>
-                                <li>✓ Caso o código esteja correto, ganharás pontos baseado em quantas pessoas conseguiram antes de ti.</li>
+                                <li><p>✓ Caso o código esteja correto, ganharás pontos baseado em quantas pessoas conseguiram antes de ti.</p></li>
                                 <br/>
-                                <li>🗴 Caso o código esteja errado, aparecerá uma janelazinha a avisar que o mesmo está errado.</li>
+                                <li><p>🗴 Caso o código esteja errado, aparecerá uma janelazinha a avisar que o mesmo está errado.</p></li>
                             </ul>
                             <p><u>----Quadro de Pontos----</u></p>
                             <p>Um ótimo sítio para garantir em que posição estás e verificar quem está na frente é o quadro de pontos!</p>

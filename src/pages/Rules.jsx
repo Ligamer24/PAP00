@@ -1,6 +1,7 @@
 import "../Rules.css"
 import r1Img from "../Images/school.png"
 import r2Img from "../Images/dependable.png"
+import r3Img from "../Images/swearing.png"
 
 
 export default  function Rules() {
@@ -36,9 +37,11 @@ export default  function Rules() {
                     <h2>Regra 3</h2>
                     <div id="info">
                         <div id="desc">
-                            <p></p>
+                            <p>Tens a liberdade de escolher o teu username.</p>
+                            <p>Fá-lo com atenção, não necessitas de colocar nomes desnecessários nele!</p>
+                            <p>Confio em ti!</p>
                         </div>
-                        <img src={r1Img} alt=""/>
+                        <img src={r3Img} alt=""/>
                     </div>
                 </div>
 

@@ -1,0 +1,6 @@
+iframe {
+    width: 30vw;
+    height: 10vh;
+
+    align-self: flex-start;
+}

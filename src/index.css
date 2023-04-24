@@ -32,8 +32,9 @@ ul {
 
 }
 
-ul li {
+ul li p {
   font-family: "Silkscreen";
+  font-size: 1vw;
 }
 
 /* Pages Title Style */
@@ -138,17 +139,17 @@ a:hover > img, button:hover > img {
 }
 
 #rulesContainer > #rule > #info > img {
-  width: 30vw;
+  width: 30%;
   margin-left: 10vw;
 }
 
 #rulesContainer > #rule2 > #info > img {
-  width: 30vw;
+  width: 30%;
   margin-right: 10vw;
 }
 
-#rulesContainer > #rule > #info > #desc > p, #rulesContainer > #rule2 > #info > #desc > p {    
-  width: 50vw;
+/* #rulesContainer > #rule > #info > #desc > p, #rulesContainer > #rule2 > #info > #desc > p {    
+  width: 50vw; */
 
-  /* line-height: 1.6; */
-}
+  /* line-height: 1.6;
+} */
