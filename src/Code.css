@@ -10,9 +10,13 @@
 }
 
 #rulesContainer > #rule > #info > #desc > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: gray;
     color: rgb(20,20,20);
     border: 2px solid rgb(20,20,20);
+    text-align: center;
 }
 
 #rulesContainer > #rule > #info > #desc > button:hover {

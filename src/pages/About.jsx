@@ -43,12 +43,12 @@ export default  function About() {
                     <div id="info">
                         <div id="desc">
                             <p>Primeiro, como qualquer competição, existe regras.<br/> Não precisas de vê-las, mas se quiseres dar uma vista de olhos, vai à página <Link to="/rules">Regras</Link> para te enquadrares.</p>
-                            <p><u>----Como Participar----</u></p>
+                            <button><p><u>Como Participar</u></p></button>
                             <p>Então, para começares a jogar tens primeiro que criar uma conta no jogo. Apenas precisas de entrar com o email da escola e a tua conta será criada.</p>
                             <p>Após teres entrado com a tua conta, aparecerá o teu email escrito na barra do topo.</p>
                             <p>Assim já podes aceder à tua área de jogador(a)!</p>
                             <p>Também terás o nome que colocaste no <Link to="/leaderboard">quadro de pontos</Link>.</p>
-                            <p><u>----Zona de Jogador(a)----</u></p>
+                            <button><p><u>Zona de Jogador</u></p></button>
                             <p>Após teres entrado com a tua conta, podes aceder à tua área (ou zona) de jogador(a)</p>
                             <p>Para entrares, existe na barra do topo algo para clicares... tenta encontrar!</p>
                             <p>A zona de jogador(a) é onde podes ver o teu progresso e ler a quadra em que estás!</p>
@@ -58,7 +58,7 @@ export default  function About() {
                                 <br/>
                                 <li><p>🗴 Caso o código esteja errado, aparecerá uma janelazinha a avisar que o mesmo está errado.</p></li>
                             </ul>
-                            <p><u>----Quadro de Pontos----</u></p>
+                            <button><p><u>Quadro de Pontos</u></p></button>
                             <p>Um ótimo sítio para garantir em que posição estás e verificar quem está na frente é o quadro de pontos!</p>
                             <p>É nele que podes gabar-te o quão bem estás na competição!</p>
 
