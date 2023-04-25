@@ -32,6 +32,7 @@ ul {
 
 }
 
+
 ul li p {
   font-family: "Silkscreen";
   font-size: 1vw;
@@ -126,7 +127,7 @@ a:hover > img, button:hover > img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /*A little twist to rule2 div*/
@@ -148,8 +149,56 @@ a:hover > img, button:hover > img {
   margin-right: 10vw;
 }
 
-/* #rulesContainer > #rule > #info > #desc > p, #rulesContainer > #rule2 > #info > #desc > p {    
-  width: 50vw; */
 
-  /* line-height: 1.6;
-} */
+/*Responsive*/
+
+@media (max-width: 426px) {
+
+  #title {
+    margin: 10vw;
+    margin-right: 20vw;
+    padding-bottom: 1vw;
+  }
+
+  p, i, del {
+    line-height: 2;
+    font-size: 3vw;
+    font-family: "SilkScreen";
+  }
+
+  #rulesContainer {
+    padding: clamp(0.2rem, 2vh, 2rem) clamp(1rem, 5vh, 10rem);
+  }
+
+  #rulesContainer > #rule > #info, #rulesContainer > #rule2 > #info {
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+
+  #rulesContainer > #rule > #info > img {
+    margin: 5vh 0;
+  }
+
+  #rulesContainer > #rule2 > #info > img {
+    margin: 5vh 0;
+  }
+
+  /*About page buttons*/
+
+  #desc > #infoButtons {
+    display: flex;
+    flex-direction: column;
+  }/*Falta fzr o mesmo para os screens de laptop e tablets(os "normais")*/
+
+  #desc > #infoButtons > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    color: rgb(20,20,20);
+    border: 2px solid rgb(20,20,20);
+    text-align: center;
+  }
+
+}

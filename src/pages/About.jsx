@@ -59,31 +59,32 @@ export default  function About() {
                     <div id="info">
                         <div id="desc">
                             <p>Primeiro, como qualquer competição, existe regras.<br/> Não precisas de vê-las, mas se quiseres dar uma vista de olhos, vai à página <Link to="/rules">Regras</Link> para te enquadrares.</p>
-                            <button id="but1" onClick={handleClick1}><p><u>Como Participar</u></p></button>
-                            {but1 && (<div id="desc1">
-                                <p>Então, para começares a jogar tens primeiro que criar uma conta no jogo. Apenas precisas de entrar com o email da escola e a tua conta será criada.</p>
-                                <p>Após teres entrado com a tua conta, aparecerá o teu email escrito na barra do topo.</p>
-                                <p>Assim já podes aceder à tua área de jogador(a)!</p>
-                                <p>Também terás o nome que colocaste no <Link to="/leaderboard">quadro de pontos</Link>.</p>
-                            </div>)}
-                            <button id="but2" onClick={handleClick2}><p><u>Zona de Jogador</u></p></button>
-                            {but2 && (<div id="desc2">
-                                <p>Após teres entrado com a tua conta, podes aceder à tua área (ou zona) de jogador(a)</p>
-                                <p>Para entrares, existe na barra do topo algo para clicares... tenta encontrar!</p>
-                                <p>A zona de jogador(a) é onde podes ver o teu progresso e ler a quadra em que estás!</p>
-                                <p>Se tiveres um palpite ou tenhas encontrado o código, é onde podes introduzi-lo.</p>
-                                <ul>
-                                    <li><p>✓ Caso o código esteja correto, ganharás pontos baseado em quantas pessoas conseguiram antes de ti.</p></li>
-                                    <br/>
-                                    <li><p>🗴 Caso o código esteja errado, aparecerá uma janelazinha a avisar que o mesmo está errado.</p></li>
-                                </ul>
-                            </div>)}
-                            <button id="but3" onClick={handleClick3}><p><u>Quadro de Pontos</u></p></button>
-                            {but3 && (<div id="desc3">
-                                <p>Um ótimo sítio para garantir em que posição estás e verificar quem está na frente é o quadro de pontos!</p>
-                                <p>É nele que podes gabar-te o quão bem estás na competição!</p>
-                            </div>)}
-
+                            <div id="infoButtons">
+                                <button id="but1" onClick={handleClick1}><p><u>Como Participar</u></p></button>
+                                {but1 && (<div id="desc1">
+                                    <p>Então, para começares a jogar tens primeiro que criar uma conta no jogo. Apenas precisas de entrar com o email da escola e a tua conta será criada.</p>
+                                    <p>Após teres entrado com a tua conta, aparecerá o teu email escrito na barra do topo.</p>
+                                    <p>Assim já podes aceder à tua área de jogador(a)!</p>
+                                    <p>Também terás o nome que colocaste no <Link to="/leaderboard">quadro de pontos</Link>.</p>
+                                </div>)}
+                                <button id="but2" onClick={handleClick2}><p><u>Zona de Jogador</u></p></button>
+                                {but2 && (<div id="desc2">
+                                    <p>Após teres entrado com a tua conta, podes aceder à tua área (ou zona) de jogador(a)</p>
+                                    <p>Para entrares, existe na barra do topo algo para clicares... tenta encontrar!</p>
+                                    <p>A zona de jogador(a) é onde podes ver o teu progresso e ler a quadra em que estás!</p>
+                                    <p>Se tiveres um palpite ou tenhas encontrado o código, é onde podes introduzi-lo.</p>
+                                    <ul>
+                                        <li><p>✓ Caso o código esteja correto, ganharás pontos baseado em quantas pessoas conseguiram antes de ti.</p></li>
+                                        <br/>
+                                        <li><p>🗴 Caso o código esteja errado, aparecerá uma janelazinha a avisar que o mesmo está errado.</p></li>
+                                    </ul>
+                                </div>)}
+                                <button id="but3" onClick={handleClick3}><p><u>Quadro de Pontos</u></p></button>
+                                {but3 && (<div id="desc3">
+                                    <p>Um ótimo sítio para garantir em que posição estás e verificar quem está na frente é o quadro de pontos!</p>
+                                    <p>É nele que podes gabar-te o quão bem estás na competição!</p>
+                                </div>)}
+                            </div>
                         </div>
                         <iframe src="https://www.youtube.com/embed/0mqqbuM9sAk" title="I Built 4 Businesses In A Row To Show It&#39;s Not Luck" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
