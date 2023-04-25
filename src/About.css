@@ -4,3 +4,8 @@ iframe {
 
     align-self: flex-start;
 }
+
+#desc1, #desc2, #desc3 {
+    background-color: rgb(10, 10, 10);
+    border: .5vw solid gray;
+}
