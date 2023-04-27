@@ -7,5 +7,35 @@ iframe {
 
 #desc1, #desc2, #desc3 {
     background-color: rgb(10, 10, 10);
+    
     border: .5vw solid gray;
+    border-radius: 2vw;
+
+    padding: 2vw;
+}
+
+#infoButtons > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: gray;
+    border: 2px solid grey;
+    border-radius: 2vw;
+
+    text-align: center;
+
+    margin: 1vw;
+}
+
+#infoButtons > button:hover {
+    background-color: rgb(20,20,20);
+}
+
+#infoButtons > button:hover > p > u {
+    color: gray;
+}
+
+#infoButtons > button > p > u {
+    color: rgb(20,20,20);
 }

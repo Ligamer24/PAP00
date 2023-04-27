@@ -195,10 +195,19 @@ a:hover > img, button:hover > img {
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-color: gray;
     color: rgb(20,20,20);
-    border: 2px solid rgb(20,20,20);
+
+    border: 2px solid grey;
     text-align: center;
   }
 
+  #desc > #infoButtons > button:hover {
+    background-color: rgb(20, 20, 20);
+  }
+
+  #desc > #infoButtons > button:hover > p > u {
+    color: grey;
+  }
 }
