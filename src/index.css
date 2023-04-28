@@ -189,7 +189,7 @@ a:hover > img, button:hover > img {
   #desc > #infoButtons {
     display: flex;
     flex-direction: column;
-  }/*Falta fzr o mesmo para os screens de laptop e tablets(os "normais")*/
+  }
 
   #desc > #infoButtons > button {
     display: flex;
@@ -210,4 +210,5 @@ a:hover > img, button:hover > img {
   #desc > #infoButtons > button:hover > p > u {
     color: grey;
   }
+
 }

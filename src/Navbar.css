@@ -93,3 +93,34 @@
   cursor: pointer;
   animation: 1s ease-in-out scale;
 }
+
+@media (max-width: 426px) {
+  .navbar {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  .navbar > button {
+    font-size: 1.6vw;
+    margin: 0;
+  }
+
+  .navbar > .pages {
+    padding: 1vw;
+  }
+
+  .navbar > .pages > a {
+    font-size: 1.6vw;
+  }
+
+  .navbar > img {
+    width: 15vw;
+    translate: 60% -10%;
+  }
+
+  .navbar > a > img {
+    width: 15vw;
+    translate: 210% -40%;
+  }
+}

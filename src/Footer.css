@@ -20,3 +20,9 @@ footer {
 footer > p {
   font-size: .75vw;
 }
+@media (max-width: 426px) {
+  footer > p {
+    font-size: 1.5vw;
+  }
+}
+
