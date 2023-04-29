@@ -28,9 +28,9 @@
   background-color: rgb(20, 20, 20);
   width: fit-content;
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   padding: 1vh 1vw;
-  margin-left: 5vw;
+  margin-left: 3vw;
 }
 
 .navbar button:hover {
@@ -52,7 +52,19 @@
   width: 1vw;
 }
 
-.navbar > a > img {
+.navbar > a[href="/"] > img {
+  position: absolute;
+  width: 10vw;
+  padding: 1vw;
+
+  border: 0.5vw solid grey;
+  border-radius: 1vw;
+  translate: 40% -40%;
+  z-index: 0;
+  background-color: rgb(20, 20, 20);
+}
+
+.navbar > a[href="/code"] > img {
   position: absolute;
   width: 10vw;
   padding: 1vw;
@@ -121,6 +133,6 @@
 
   .navbar > a > img {
     width: 15vw;
-    translate: 210% -40%;
+    translate: 230% -40%;
   }
 }

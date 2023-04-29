@@ -48,3 +48,10 @@ td {
     height: 8vw;
     text-align: center;
 }
+
+@media (max-width: 426px) {
+    td {
+        font-size: 3vw;
+        height: 10vh;
+    }
+}

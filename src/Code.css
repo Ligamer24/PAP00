@@ -54,3 +54,28 @@
     margin-top: 10vh;
 
 }
+
+
+@media (max-width: 426px) {
+    #rulesContainer > #rule > #info {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #rulesContainer > #rule > #info > #desc > input, #rulesContainer > #rule > #info > #desc > button {
+        width: 50vw;
+        height: 6vh;
+
+        font-size: 2vw;
+    }
+
+
+    #rulesContainer > #rule2 > #cue {
+        margin: 5vh 10vw;
+    }
+
+    #rulesContainer > #rule2 > #cue > p, #cue > p {
+        font-size: 3vw;
+    }
+}
