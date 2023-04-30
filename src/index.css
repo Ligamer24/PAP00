@@ -38,6 +38,12 @@ ul li p {
   font-size: 1vw;
 }
 
+#notAvailable {
+  padding: 2vw;
+  border: .5vw solid gray;
+  border-radius: 5vw;
+}
+
 /* Pages Title Style */
 @keyframes title-entry {
   0% {
@@ -153,6 +159,10 @@ a:hover > img, button:hover > img {
 /*Responsive*/
 
 @media (max-width: 426px) {
+
+  #notAvailable {
+    border: 1vw solid gray;
+  }
 
   #title {
     margin: 10vw;

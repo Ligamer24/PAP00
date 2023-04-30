@@ -17,13 +17,13 @@ import {auth} from "./Firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
 
-
+const isActive = false
 
 export default function App() {
   
   return (
     <>
-      <BrowserRouter>
+      {isActive ? (<BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -33,7 +33,8 @@ export default function App() {
             <Route path="code" element={<Code />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter>) : 
+      (<h1 id="notAvailable">Em breve...</h1>)}
       <Analytics />
     </>
   );
