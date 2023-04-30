@@ -52,7 +52,7 @@
   width: 1vw;
 }
 
-.navbar > a[href="/"] > img {
+.navbar > a[href="/"] > img, .navbar > a[href="/code"] > img {
   position: absolute;
   width: 10vw;
   padding: 1vw;
@@ -64,17 +64,6 @@
   background-color: rgb(20, 20, 20);
 }
 
-.navbar > a[href="/code"] > img {
-  position: absolute;
-  width: 10vw;
-  padding: 1vw;
-
-  border: 0.5vw solid grey;
-  border-radius: 1vw;
-  translate: -40% -40%;
-  z-index: 0;
-  background-color: rgb(20, 20, 20);
-}
 
 .navbar > img {
   position: absolute;
@@ -131,7 +120,7 @@
     translate: 60% -10%;
   }
 
-  .navbar > a > img {
+  .navbar > a[href="/"] > img, .navbar > a[href="/code"] > img {
     width: 15vw;
     translate: 230% -40%;
   }
