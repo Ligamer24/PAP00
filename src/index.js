@@ -17,7 +17,7 @@ import {auth} from "./Firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
 
-const isActive = false
+const isActive = true
 
 export default function App() {
   
