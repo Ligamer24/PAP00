@@ -86,7 +86,7 @@ export default  function About() {
                                 </div>)}
                             </div>
                         </div>
-                        <iframe src="https://www.youtube.com/embed/0mqqbuM9sAk" title="I Built 4 Businesses In A Row To Show It&#39;s Not Luck" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        {/* <iframe src="https://www.youtube.com/embed/0mqqbuM9sAk" title="I Built 4 Businesses In A Row To Show It&#39;s Not Luck" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> */}
                     </div>
                 </div>
                 
