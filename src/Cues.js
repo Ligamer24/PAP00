@@ -41,10 +41,10 @@ const cue5 = [
 ]
 
 const cue6 = [
-  "6",
-  "6",
-  "6",
-  "6",
+  "Uma sala com diversos recursos",
+  "De tintas a uma folha",
+  "Faz corretamente a tua escolha",
+  "Para assim enfrentar os próximos versos",
   "24"
 ]
 
