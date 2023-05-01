@@ -52,6 +52,11 @@
   width: 1vw;
 }
 
+.navbar > a[href="/"], .navbar > a[href="/code"] {
+  position: absolute;
+  left: 45vw;
+}
+
 .navbar > a[href="/"] > img, .navbar > a[href="/code"] > img {
   position: absolute;
   width: 10vw;
@@ -59,7 +64,7 @@
 
   border: 0.5vw solid grey;
   border-radius: 1vw;
-  translate: 40% -40%;
+  translate: -40% -40%;
   z-index: 0;
   background-color: rgb(20, 20, 20);
 }
@@ -118,6 +123,10 @@
   .navbar > img {
     width: 15vw;
     translate: 60% -10%;
+  }
+
+  .navbar > a[href="/"], .navbar > a[href="/code"] {
+    position: static;
   }
 
   .navbar > a[href="/"] > img, .navbar > a[href="/code"] > img {

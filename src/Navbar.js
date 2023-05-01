@@ -79,7 +79,7 @@ function showLogoMessage() {
       <div className="navbar">
       <button onClick={userData ? userSignOut : googleAuth}><img src={arrow} alt="" />{userData ? userData.email : "Login"}</button>
 
-        {userData ? <Link to="/code"><img src={logo} alt="" /></Link> : <Link to="/"><img src={logo} alt="" onClick={showLogoMessage}/></Link>}
+        {userData ? <Link to="/code"><img src={logo} alt=""/></Link> : <Link to="/"><img src={logo} alt="" onClick={showLogoMessage}/></Link>}
         <div className="pages">
           <Link to="/"><img src={arrow} alt="" />Home</Link>
           <Link to="/leaderboard"><img src={arrow} alt="" />Pontos</Link>
