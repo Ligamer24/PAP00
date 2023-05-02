@@ -41,18 +41,18 @@ const cue5 = [
 ]
 
 const cue6 = [
-  "Uma sala com diversos recursos",
-  "De tintas a uma folha",
+  "Uma sala com itens diversos",
+  "Desde tintas a uma folha",
   "Faz corretamente a tua escolha",
-  "Para assim enfrentar os próximos versos",
+  "Para assim enfrentares os próximos versos",
   "24"
 ]
 
 const cue7 = [
-  "7",
-  "7",
-  "7",
-  "7",
+  "Onde a energia é reabastecida",
+  "e o interesse satisfeito",
+  "Solicita a senha 108",
+  "E a chave desta adivinha será cumprida",
   "hmupck"
 ]
 
