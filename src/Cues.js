@@ -29,7 +29,7 @@ const cue4 = [
   "Existe uma única peça que o faz mover",
   "De mim vem uma imensão gratidão",
   "A essa peça que deste projeto fá-lo a continuação",
-  "hmhm"
+  "playername"
 ]
 
 const cue5 = [

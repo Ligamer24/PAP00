@@ -19,8 +19,7 @@ export default function Code() {
         if (user) {
             userData.current = user
             const playerData = await getCurrentUser(user.uid);
-            console.log(playerData)
-            console.log(userData.current.photoURL)
+            //console.log(playerData)
             setPCue(playerData.Cue)
             setPScore(playerData.Score)
             setPName(playerData.Name)
@@ -50,8 +49,9 @@ export default function Code() {
     }
 
     function handleClick() {
-        
-        if (input.current.value.toLowerCase() === cue[4]) {
+        (cue[4] === "playername") && (cue[4] = pName);
+
+        if (input.current.value.toLowerCase() === cue[4].toLowerCase()) {
             input.current.value = ""
             oldPScore.current = pScore
             setIsCodeRight(true)
@@ -61,9 +61,10 @@ export default function Code() {
         }
     }
 
+
     return (
-        
-        <>
+    <>
+        {pCue !== 11 ? (<>
             <h1 id="title">Codigo[{pCue}/10]</h1>
             <div id="rulesContainer">
 
@@ -112,6 +113,21 @@ export default function Code() {
                     </div>
                 </div>
             </div>
-        </>
+        </>) : (
+            <div style={{height: "100vh"}}>
+                <h1 id="title">WOW!</h1>
+                <div id="rulesContainer">
+                    <div id="rule">
+                        <h2>Inacreditavel!</h2>
+                        <div id="info">
+                            <div id="desc">
+                                <p>Inexplicável!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )}
+    </>
     )
 }

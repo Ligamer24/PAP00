@@ -33,4 +33,5 @@ Definir o código para cada um
 
 -Definir o código da adivinha 3 para algo relaciionado com a máquina de reciclar
 
--Definir o código da adivinha 4 para o nome do jogador
+((-Definir o código da adivinha 4 para o nome do jogador))
+FEITO
