@@ -65,19 +65,22 @@ const cue8 = [
 ]
 
 const cue9 = [
-  "Chegando à reta final",
-  "O fim a chegar",
-  "Não te esqueças do primordial",
-  "sssssssssssssss",
-  "123456789"
+  "",
+  "",
+  "",
+  "",
+  ""
 ]
-
+  // "Ao fim do jogo estás a chegar",
+  // "A tua dedicação demonstra-se peculiar",
+  // "É ela nutrida o suficiente",
+  // "",
 const cue10 = [
-  "10",
-  "10",
-  "10",
-  "10",
-  "123"
+  "Longas dez adivinhas",
+  "as quais tu tinhas.",
+  "Direciona-te ao coração da escola",
+  "E irás ver o código na bandeirola",
+  "ewf35"
 ]
 export const cues = [
     cue1,
