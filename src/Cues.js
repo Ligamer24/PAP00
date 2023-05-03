@@ -13,7 +13,7 @@ const cue2 = [
   "Em um corredor com três portas",
   "Material e equipamento tem numa delas",
   "Para lá entrar, às guardiãs deverás falar",
-  "tttttt"
+  "13XI14HR"
 ]
 
 const cue3 = [
@@ -37,7 +37,7 @@ const cue5 = [
   "Onde imensas divisões existem",
   "Em uma está a guardar",
   "O conhecimento que muitos hesitem",
-  "z02320"
+  "21AQ32CH"
 ]
 
 const cue6 = [
@@ -45,7 +45,7 @@ const cue6 = [
   "Desde tintas a uma folha",
   "Faz corretamente a tua escolha",
   "Para assim enfrentares os próximos versos",
-  "24"
+  "10PL07CE"
 ]
 
 const cue7 = [
@@ -53,7 +53,7 @@ const cue7 = [
   "e o interesse satisfeito",
   "Solicita a senha 108",
   "E a chave desta adivinha será cumprida",
-  "hmupck"
+  "10SH80BR"
 ]
 
 const cue8 = [
@@ -61,14 +61,14 @@ const cue8 = [
   "a qual era somente uma saída.",
   "Lá não tem muito, pouco mais que nada",
   "O suficiente para saber a tua chegada e partida",
-  "234f"
+  "24EN07SD"
 ]
 
 const cue9 = [
-  "9",
-  "9",
-  "9",
-  "9",
+  "Chegando à reta final",
+  "O fim a chegar",
+  "Não te esqueças do primordial",
+  "sssssssssssssss",
   "123456789"
 ]
 
