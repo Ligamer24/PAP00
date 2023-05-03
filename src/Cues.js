@@ -9,7 +9,7 @@ const cue1 = [
 
 
 const cue2 = [
-  "Guardiãs que pelo sossego zelam",
+  "Guardiãs que pelo sossego ficam a zelar",
   "Em um corredor com três portas",
   "Material e equipamento tem numa delas",
   "Para lá entrar, às guardiãs deverás falar",
@@ -57,10 +57,10 @@ const cue7 = [
 ]
 
 const cue8 = [
-  "8",
-  "8",
-  "8",
-  "8",
+  "Agora também uma entrada",
+  "a qual era somente uma saída.",
+  "Lá não tem muito, pouco mais que nada",
+  "O suficiente para saber a tua chegada e partida",
   "234f"
 ]
 

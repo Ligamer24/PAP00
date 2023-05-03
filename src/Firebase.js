@@ -30,7 +30,7 @@ export async function updatePlayerData(score, cue, user) {
   const scoreValue = await getScoreValue(cue)
   await updateDoc(doc(db, "users", user.uid), {
     Score: score + scoreValue,
-    Cue: (cue !== 10) ? cue + 1 : cue 
+    Cue: (cue !== 10) ? cue + 1 : 11 
   })
   console.log("A receber:", scoreValue)
 }

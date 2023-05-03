@@ -38,8 +38,9 @@ export default function Code() {
         return (
             <>
                 <p>Muito bem {username}!</p>
-                <p>Ganhaste {score} pontos!</p>
-                {pCue === 10 ? <p>Parabéns!</p> : <p>Passaste para a fase seguinte!</p>}
+                <p>Ganhaste {score === 0 ? "" : score} pontos!</p>
+                
+                <p>Passaste para a fase seguinte!</p>
                 <div id="cue">
                     <p>Para o jogo continuar,<br />
                     Apenas precisas de recarregar</p>
@@ -122,6 +123,14 @@ export default function Code() {
                         <div id="info">
                             <div id="desc">
                                 <p>Inexplicável!</p>
+                                <p>Parabéns!</p>
+                                <div id="cue">
+                                    <p>Excelente! Grande conquista.<br />
+                                    Tentativas ficam em ti protagonista,<br />
+                                    Não desististe, continuaste avante,<br />
+                                    Os meus 1000 obrigados pelo teu esforço constante<br />
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
