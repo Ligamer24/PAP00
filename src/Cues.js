@@ -65,10 +65,10 @@ const cue8 = [
 ]
 
 const cue9 = [
-  "",
-  "",
-  "",
-  "",
+  "Imersos na água",
+  "Onde localiza-se o catelo.",
+  "Nunca vêem a lua",
+  "Entre muitos, a ti e ao teu cabelo",
   ""
 ]
   // "Ao fim do jogo estás a chegar",
@@ -76,10 +76,10 @@ const cue9 = [
   // "É ela nutrida o suficiente",
   // "",
 const cue10 = [
-  "Longas dez adivinhas",
-  "as quais tu tinhas.",
-  "Direciona-te ao coração da escola",
-  "E irás ver o código na bandeirola",
+  "São vários os monumentos",
+  "De diferentes tipos e usos.",
+  "Une de cada um os fragmentos",
+  "Que a resposta esconde nesses diversos",
   "ewf35"
 ]
 export const cues = [
