@@ -21,7 +21,7 @@ const cue3 = [
   "O segundo já muitos desistirão",
   "O terceiro tens uma condição:",
   "Da máquina ter um cupão",
-  "woooooooow"
+  "sielaff"
 ]
 
 const cue4 = [
@@ -37,7 +37,7 @@ const cue5 = [
   "Onde imensas divisões existem",
   "Em uma está a guardar",
   "O conhecimento que muitos hesitem",
-  "21AQ32CH"
+  "21BE32CH"
 ]
 
 const cue6 = [
@@ -66,20 +66,17 @@ const cue8 = [
 
 const cue9 = [
   "Imersos na água",
-  "Onde localiza-se o catelo.",
-  "Nunca vêem a lua",
-  "Entre muitos, a ti e ao teu cabelo",
-  ""
+  "Onde um barco se localiza.",
+  "Não vêem a lua",
+  "E são dez que se totaliza",
+  "52PX10AQ"
 ]
-  // "Ao fim do jogo estás a chegar",
-  // "A tua dedicação demonstra-se peculiar",
-  // "É ela nutrida o suficiente",
-  // "",
+
 const cue10 = [
   "São vários os monumentos",
-  "De diferentes tipos e usos.",
-  "Une de cada um os fragmentos",
-  "Que a resposta esconde nesses diversos",
+  "Com códigos inscritos",
+  "Une-os como fragmentos",
+  "Que a resposta engloba nesses efeitos",
   "ewf35"
 ]
 export const cues = [
