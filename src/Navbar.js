@@ -15,7 +15,7 @@ export default function Navbar() {
 
   let listener = onAuthStateChanged(auth, async (user) => {
     console.log(user)
-    setUserData(user)
+    user.email.split("@")[1] === "espeniche.pt" ? setUserData(user) : setUserData(null)
   })
 
   listener()
@@ -31,13 +31,14 @@ getRedirectResult(auth)
 
   if (userDomain === "espeniche.pt") {
     console.log("Email da escola!")
+    setUserData(user)
+
   } else {
     window.alert("Usa o email da escola!")
     setUserData(null)
     return
   }
 
-  setUserData(user)
   user.metadata.creationTime === user.metadata.lastSignInTime ? addUserToDb(user): console.log("Já tem conta!")
   console.log("Sign In succesful!")
 
