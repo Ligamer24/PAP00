@@ -20,7 +20,7 @@ const cue3 = [
   "O primeiro passo são poucos os que dão",
   "O segundo já muitos desistirão",
   "O terceiro tens uma condição:",
-  "Da máquina ter um cupão",
+  "Da máquina verificar o nome repetido no cupão",
   "sielaff"
 ]
 
@@ -73,8 +73,8 @@ const cue9 = [
 ]
 
 const cue10 = [
-  "São vários os monumentos",
-  "Com códigos inscritos",
+  "São várias maquinarias, monumentos",
+  "Cada uma com códigos inscritos",
   "Une-os como fragmentos",
   "Que a resposta engloba nesses efeitos",
   "ewf35"
