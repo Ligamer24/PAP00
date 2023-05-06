@@ -15,7 +15,7 @@ export default function Navbar() {
 
   let listener = onAuthStateChanged(auth, async (user) => {
     console.log(user)
-    user.email.split("@")[1] === "espeniche.pt" ? setUserData(user) : setUserData(null)
+    if (user) user.email.split("@")[1] === "espeniche.pt" ? setUserData(user) : setUserData(null)
   })
 
   listener()
