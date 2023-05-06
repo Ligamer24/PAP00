@@ -133,7 +133,6 @@ a:hover > img, button:hover > img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
 }
 
 /*A little twist to rule2 div*/

@@ -10,7 +10,7 @@ export default function Main() {
     <div className="main">
       <h1>Bem-Vindo Jogador(a)</h1>
       <div className="content">
-        <img src={start} alt="" />
+        {/* <Link to=""><img src={start} alt="" /></Link> */}
         <div className="desc">
           <Link to="/leaderboard"><img src={arrow} width={"3vw"} alt="" />Pontos</Link>
           <Link to="/rules"><img src={arrow} width={"3vw"} alt="" />Regras</Link>

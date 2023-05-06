@@ -5,7 +5,7 @@ iframe {
     align-self: flex-start;
 }
 
-#desc1, #desc2, #desc3 {
+#desc0, #desc1, #desc2, #desc3 {
     background-color: rgb(10, 10, 10);
     
     border: .5vw solid gray;
@@ -25,7 +25,7 @@ iframe {
 
     text-align: center;
 
-    margin: 1vw;
+    margin: 3vw 0;
 }
 
 #infoButtons > button:hover {

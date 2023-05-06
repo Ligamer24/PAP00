@@ -5,9 +5,15 @@ import img1 from "../Images/calendar.png"
 import img2 from "../Images/team.png"
 
 export default  function About() {
+    const [but0, setBut0] = useState(false)
     const [but1, setBut1] = useState(false)
     const [but2, setBut2] = useState(false)
     const [but3, setBut3] = useState(false)
+
+
+    function handleClick0() {
+        setBut0(!but0)
+    }
 
     function handleClick1() {
         setBut1(!but1)
@@ -58,16 +64,24 @@ export default  function About() {
                     <h2>Como funciona?</h2>
                     <div id="info">
                         <div id="desc">
-                            <p>Primeiro, como qualquer competição, existe regras.<br/> Não precisas de vê-las, mas se quiseres dar uma vista de olhos, vai à página <Link to="/rules">Regras</Link> para te enquadrares.</p>
+                            <p>Primeiro, como qualquer competição, existe regras.<br/> Se quiseres dar uma vista de olhos, vai à página <Link to="/rules">Regras</Link> para te enquadrares.</p>
                             <div id="infoButtons">
-                                <button id="but1" onClick={handleClick1}><p><u>Como Participar</u></p></button>
+                                <button id="but0" onClick={handleClick0}><p><u>Objetivo do Eternal Quest</u></p></button>
+                                {but0 && (<div id="desc0">
+                                    <p>O jogo é onstituído por 10 quadras, cada uma delas referindo-se a algo ou a alguém.</p>
+                                    <p>Se encontraste algo ou alguém que se refere à quadra em que estás, então haverá um código para usares. Caso se refira a alguém, basta pedires à pessoa o código que a mesma te dará.</p>
+                                    <p>Com o código obtido, podes usá-lo na tua <Link to="/code">Zona de Jogador</Link> e, caso o mesmo esteja correto, passas para a próxima quadra e ganhas pontos baseado em quantas pessoas conseguiram passar a quadra primeiro.</p>
+                                </div>)}
+
+                                <button id="but1" onClick={handleClick1}><p><u>1-Como Participar</u></p></button>
                                 {but1 && (<div id="desc1">
                                     <p>Então, para começares a jogar tens primeiro que criar uma conta no jogo. Apenas precisas de entrar com o email da escola e a tua conta será criada.</p>
                                     <p>Após teres entrado com a tua conta, aparecerá o teu email escrito na barra do topo.</p>
                                     <p>Assim já podes aceder à tua área de jogador(a)!</p>
                                     <p>Também terás o nome que colocaste no <Link to="/leaderboard">quadro de pontos</Link>.</p>
                                 </div>)}
-                                <button id="but2" onClick={handleClick2}><p><u>Zona de Jogador</u></p></button>
+
+                                <button id="but2" onClick={handleClick2}><p><u>2-Zona de Jogador</u></p></button>
                                 {but2 && (<div id="desc2">
                                     <p>Após teres entrado com a tua conta, podes aceder à tua área (ou zona) de jogador(a)</p>
                                     <p>Para entrares, existe na barra do topo algo para clicares... tenta encontrar!</p>
@@ -79,10 +93,11 @@ export default  function About() {
                                         <li><p>🗴 Caso o código esteja errado, aparecerá uma janelazinha a avisar que o mesmo está errado.</p></li>
                                     </ul>
                                 </div>)}
-                                <button id="but3" onClick={handleClick3}><p><u>Quadro de Pontos</u></p></button>
+
+                                <button id="but3" onClick={handleClick3}><p><u>3-Quadro de Pontos</u></p></button>
                                 {but3 && (<div id="desc3">
-                                    <p>Um ótimo sítio para garantir em que posição estás e verificar quem está na frente é o quadro de pontos!</p>
-                                    <p>É nele que podes gabar-te o quão bem estás na competição!</p>
+                                    <p>O quadro de pontos é onde podes ver a tua classificação com outros jogadores.</p>
+                                    <p>Assim, deixa o Eternal Quest mais competitivo e divertido!</p>
                                 </div>)}
                             </div>
                         </div>
