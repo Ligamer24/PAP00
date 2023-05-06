@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
-import logo from "./Images/Logo1.png";
+import logo from "./Images/logo.png";
 import arrow from "./Images/arrow.png";
 import { Link } from "react-router-dom";
 import { auth, addUserToDb} from "./Firebase";
