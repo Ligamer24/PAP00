@@ -28,6 +28,9 @@ coletando informações com o listener do firebase "OnAuthStateChanged()" e mani
 
 --A fazer antes de lançar o Eternal Quest:
 
+-Divulgar e promover o projeto através de posters.
+-Acabar de fazer o vídeo
+
 -Falar com as funcionárias do ginásio, biblioteca e papelaria. Pedir para que possam dar o código.
 Definir o código para cada um
 

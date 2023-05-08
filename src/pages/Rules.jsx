@@ -45,7 +45,7 @@ export default  function Rules() {
                     </div>
                 </div>
 
-                <div id="rule2">
+                {/* <div id="rule2">
                     <h2>Regra 4</h2>
                     <div id="info">
                         <div id="desc">
@@ -53,7 +53,7 @@ export default  function Rules() {
                         </div>
                         <img src={r1Img} alt=""/>
                     </div>
-                </div>
+                </div> */}
                 
             </div>
         </>

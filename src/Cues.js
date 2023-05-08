@@ -1,10 +1,10 @@
-// const cue1 = [
-//     "Se vencer o jogo é o que anseias",
-//     "Os dez desafios terás que enfrentar",
-//     "Para a tua jornada começar",
-//     "OK terás que digitar",
-//     "ok"
-// ]
+const cue1 = [
+    "Se vencer o jogo é o que anseias",
+    "Os dez desafios terás que enfrentar",
+    "Para a tua jornada começar",
+    "OK terás que digitar",
+    "ok"
+]
 
 
 
@@ -82,13 +82,13 @@
 
 //Test Zone
 
-const cue1 = [
-  "1",
-  "1",
-  "1",
-  "1",
-  "1"
-]
+// const cue1 = [
+//   "1",
+//   "1",
+//   "1",
+//   "1",
+//   "1"
+// ]
 
 
 
