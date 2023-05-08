@@ -47,10 +47,10 @@ async function getScoreValue(pCue) {
     }
   })
 
-  if (count > 10) {
-    return 100;
+  if (count > 20) {
+    return 50;
   } else {
-    return 1000 - 100*count;
+    return 1000 - 50*count;
   }
 }
 
