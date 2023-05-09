@@ -11,7 +11,7 @@ const cue1 = [
 // const cue2 = [
 //   "Guardiãs que pelo sossego ficam a zelar",
 //   "Em um corredor com três portas",
-//   "Material e equipamento tem numa delas",
+//   "Material e equipamento desportivo tem numa delas",
 //   "Para lá entrar, às guardiãs deverás falar",
 //   "13XI14HR"
 // ]

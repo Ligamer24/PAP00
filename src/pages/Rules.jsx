@@ -16,6 +16,7 @@ export default  function Rules() {
                         <div id="desc">
                             <p>Apenas quem faz parte da <u><i>ESP</i></u> pode jogar!</p>
                             <p>És aluno(a), docente ou não docente? Força! Estás à vontade de jogar!</p>
+                            <p>Basta entrares com o email da escola.</p>
                         </div>
                         <img src={r1Img} alt=""/>
                     </div>
