@@ -2,6 +2,7 @@ import "../Rules.css"
 import r1Img from "../Images/school.png"
 import r2Img from "../Images/dependable.png"
 import r3Img from "../Images/swearing.png"
+import r4Img from "../Images/password.png"
 
 
 export default  function Rules() {
@@ -46,15 +47,18 @@ export default  function Rules() {
                     </div>
                 </div>
 
-                {/* <div id="rule2">
+                <div id="rule2">
                     <h2>Regra 4</h2>
                     <div id="info">
                         <div id="desc">
-                            <p></p>
+                            <p>O jogo ocorre apenas no rés do chão da escola</p>
+                            <p>O código pode estar tanto em objetos, locais ou pessoas</p>
+                            <p>Existe uma exceção em relação a uma minoria das quadras</p>
+                            <p>Nesses casos, pensa bem na adivinha pois o código não é fisico</p>
                         </div>
-                        <img src={r1Img} alt=""/>
+                        <img src={r4Img} alt=""/>
                     </div>
-                </div> */}
+                </div>
                 
             </div>
         </>

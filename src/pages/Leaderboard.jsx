@@ -35,7 +35,7 @@ export default function Leaderboard() {
                 {insertPlayer(userData)}
             </tbody>
         </table>
-        {(insertPlayer(userData).length === 0) && <h1 style={{textAlign:"center"}}>Sem jogadores...</h1>}
+        {(insertPlayer(userData).length === 0) && <h1 style={{textAlign:"center", margin:"30vh", animation: "3s ease-in-out div-entry"}}>Sem jogadores...</h1>}
         </>
     )
 }

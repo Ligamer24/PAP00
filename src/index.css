@@ -44,6 +44,13 @@ ul li p {
   border-radius: 5vw;
 }
 
+iframe {
+  width: 30vw;
+  height: 20vw;
+
+  margin: 5vw;
+}
+
 /* Pages Title Style */
 @keyframes title-entry {
   0% {

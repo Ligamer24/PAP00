@@ -13,18 +13,30 @@ export default  function About() {
 
     function handleClick0() {
         setBut0(!but0)
+        setBut1(false)
+        setBut2(false)
+        setBut3(false)
     }
 
     function handleClick1() {
         setBut1(!but1)
+        setBut0(false)
+        setBut2(false)
+        setBut3(false)
     }
     
     function handleClick2() {
         setBut2(!but2)
+        setBut0(false)
+        setBut1(false)
+        setBut3(false)
     }
 
     function handleClick3() {
         setBut3(!but3)
+        setBut1(false)
+        setBut2(false)
+        setBut0(false)
     }
     return (
         <>
@@ -70,7 +82,7 @@ export default  function About() {
                                 {but0 && (<div id="desc0">
                                     <p>O jogo é onstituído por 10 quadras, cada uma delas referindo-se a algo ou a alguém.</p>
                                     <p>Se encontraste algo ou alguém que se refere à quadra em que estás, então haverá um código para usares. Caso se refira a alguém, basta pedires à pessoa o código que a mesma te dará.</p>
-                                    <p>Com o código obtido, podes usá-lo na tua <Link to="/code">Zona de Jogador</Link> e, caso o mesmo esteja correto, passas para a próxima quadra e ganhas pontos baseado em quantas pessoas conseguiram passar a quadra primeiro.</p>
+                                    <p>Com o código obtido, podes usá-lo na tua <Link to="/code">Zona de Jogador</Link> e, caso o mesmo esteja correto, passas para a próxima quadra, ganhando pontos baseado em quantas pessoas conseguiram passar a quadra primeiro.</p>
                                 </div>)}
 
                                 <button id="but1" onClick={handleClick1}><p><u>1-Como Participar</u></p></button>

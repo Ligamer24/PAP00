@@ -1,6 +1,7 @@
 .main {
     border: 0.25vw solid gray;
 }
+
 .main > h1 {
     font-size: 2vw;
     text-align: right;
@@ -53,6 +54,12 @@
     .main > .content {
         flex-direction: column-reverse;
 
+        margin-top: 5vh;
+    }
+
+    .main > .content > iframe {
+        width: 30vh;
+        height: 20vh;
         margin-top: 5vh;
     }
 
