@@ -80,9 +80,9 @@ export default  function About() {
                             <div id="infoButtons">
                                 <button id="but0" onClick={handleClick0}><p><u>Objetivo do Eternal Quest</u></p></button>
                                 {but0 && (<div id="desc0">
-                                    <p>O jogo é onstituído por 10 quadras, cada uma delas referindo-se a algo ou a alguém.</p>
-                                    <p>Se encontraste algo ou alguém que se refere à quadra em que estás, então haverá um código para usares. Caso se refira a alguém, basta pedires à pessoa o código que a mesma te dará.</p>
-                                    <p>Com o código obtido, podes usá-lo na tua <Link to="/code">Zona de Jogador</Link> e, caso o mesmo esteja correto, passas para a próxima quadra, ganhando pontos baseado em quantas pessoas conseguiram passar a quadra primeiro.</p>
+                                    <p>O jogo é onstituído por 10 quadras, cada uma delas referindo-se a algo, a alguém ou a um local.</p>
+                                    <p>Se encontraste algo ou alguém que se refere à quadra em que estás, então haverá um código para usares. Caso se refira a alguém ou a um local, basta pedires à pessoa responsável do local o código que a mesma te dará.</p>
+                                    <p>Com o código obtido, podes usá-lo na tua <Link>Zona de Jogador</Link> e, caso o mesmo esteja correto, passas para a próxima quadra, ganhando pontos baseado em quantas pessoas conseguiram passar a quadra primeiro.</p>
                                 </div>)}
 
                                 <button id="but1" onClick={handleClick1}><p><u>1-Como Participar</u></p></button>
@@ -96,7 +96,7 @@ export default  function About() {
                                 <button id="but2" onClick={handleClick2}><p><u>2-Zona de Jogador</u></p></button>
                                 {but2 && (<div id="desc2">
                                     <p>Após teres entrado com a tua conta, podes aceder à tua área (ou zona) de jogador(a)</p>
-                                    <p>Para entrares, existe na barra do topo algo para clicares... tenta encontrar!</p>
+                                    <p>Para entrares, existe na barra do topo o logótipo. Clica nele!</p>
                                     <p>A zona de jogador(a) é onde podes ver o teu progresso e ler a quadra em que estás!</p>
                                     <p>Se tiveres um palpite ou tenhas encontrado o código, é onde podes introduzi-lo.</p>
                                     <ul>

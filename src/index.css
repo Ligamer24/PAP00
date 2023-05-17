@@ -35,7 +35,7 @@ ul {
 
 ul li p {
   font-family: "Silkscreen";
-  font-size: 1vw;
+  font-size: 1.25vw;
 }
 
 #notAvailable {
@@ -225,6 +225,10 @@ a:hover > img, button:hover > img {
 
   #desc > #infoButtons > button:hover > p > u {
     color: grey;
+  }
+
+  ul li p {
+    font-size: 2vw;
   }
 
 }
