@@ -1,26 +1,31 @@
 # Eternal Quest (2023)
 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+🔗 **Live Demo:** [https://eternalquest.vercel.app](https://eternalquest.vercel.app)
+
 > **Note:** This project was developed as my **Final Vocational Project (PAP)** for the IT Systems Course at Escola Secundária de Peniche.
 
 ## 📖 About the Project
 **Eternal Quest** is a dynamic web application designed to gamify the school environment. Inspired by the book *Ready Player One* by Ernest Cline, the project creates a competitive and interactive experience for students and staff.
 
-The main goal is to challenge users to interpret riddles (quatrains) to locate specific objects, services, or people within the school's ground floor.
-
-## 🚀 Key Features
-* **Gamification:** Users solve 10 different riddles to progress in the game.
-* **Dynamic Content:** Data is managed dynamically using JSON structures.
-* **From Scratch:** developed entirely through coding, without the use of visual website builders, to ensure a deep understanding of web development fundamentals.
+The application allows users to interpret riddles to locate specific objects or people within the school, tracking progress in real-time.
 
 ## 🛠️ Tech Stack
-This project was built using a component-based approach:
-* **Languages:** JavaScript (ES6+), HTML5, CSS3.
-* **Data & Logic:** JSON, JSX.
-* **Tools:** Visual Studio Code.
+This project was built using a modern serverless architecture:
 
-## 💡 Motivation
-The primary objective was to demonstrate the technical skills acquired during my 3-year vocational course. By avoiding "drag-and-drop" tools, I focused on learning how frameworks and libraries work under the hood, preparing myself for a professional engineering environment.
+* **Frontend:** React.js (Components, Hooks, JSX), CSS3.
+* **Backend / Database:** Google Firebase (Realtime Database).
+* **Deployment:** Vercel (CI/CD).
+* **Tools:** Visual Studio Code, Git.
+
+## 🚀 Key Features
+* **Gamification Logic:** 10 sequential riddle stages implemented with React state management.
+* **Cloud Database:** Questions and user progress are stored and retrieved from Firebase.
+* **Responsive Design:** Interface adapted for mobile and desktop use.
+* **From Scratch:** Developed by writing custom code logic, ensuring a deep understanding of the React ecosystem and data flow.
 
 ---
 *Developed by Leandro Salvador (2023)*
-*Promotional video collaboration: Mattia Muraro (EPI Lisboa)*
